@@ -25,6 +25,12 @@
     --card-red-dark: #b91c1c;
     --card-red-light: #ef4444;
     
+    /* Cores de contraste melhoradas */
+    --text-blue: #1e40af;
+    --text-red: #dc2626;
+    --border-blue: rgba(30, 64, 175, 0.15);
+    --border-red: rgba(220, 38, 38, 0.15);
+    
     /* Cores de fundo suaves */
     --bg-blue-light: #eff6ff;
     --bg-red-light: #fef2f2;
@@ -396,9 +402,20 @@ nav {
     align-items: center;
 }
 
+.logo a {
+    display: block;
+    transition: var(--transition);
+}
+
 .logo img {
     height: 50px;
     width: auto;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 .nav-menu {
@@ -600,17 +617,17 @@ h2::after {
     background: var(--white);
     padding: 3rem 2rem;
     border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 3px solid var(--card-blue);
+    border: 1px solid rgba(30, 64, 175, 0.1);
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
 .differential:nth-child(even) {
-    border-color: var(--card-red);
+    border-color: rgba(220, 38, 38, 0.1);
 }
 
 .differential::before {
@@ -619,10 +636,11 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
+    height: 5px;
     background: linear-gradient(90deg, var(--card-blue), var(--card-blue-light));
     transform: scaleX(1);
     transition: transform 0.3s ease;
+    opacity: 0.9;
 }
 
 .differential:nth-child(even)::before {
@@ -630,14 +648,14 @@ h2::after {
 }
 
 .differential:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
-    border-color: var(--card-blue-dark);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(30, 64, 175, 0.1);
+    border-color: rgba(30, 64, 175, 0.2);
 }
 
 .differential:nth-child(even):hover {
-    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
-    border-color: var(--card-red-dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(220, 38, 38, 0.1);
+    border-color: rgba(220, 38, 38, 0.2);
 }
 
 .differential:hover::before {
@@ -1050,15 +1068,15 @@ h2::after {
     border-radius: 16px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 2px solid var(--card-blue);
+    border: 1px solid rgba(30, 64, 175, 0.1);
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .solution:nth-child(even) {
-    border-color: var(--card-red);
+    border-color: rgba(220, 38, 38, 0.1);
 }
 
 .solution::before {
@@ -1067,8 +1085,9 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 4px;
     background: linear-gradient(90deg, var(--card-blue), var(--card-blue-light));
+    opacity: 0.8;
 }
 
 .solution:nth-child(even)::before {
@@ -1076,14 +1095,14 @@ h2::after {
 }
 
 .solution:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.15);
-    border-color: var(--card-blue-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(30, 64, 175, 0.12);
+    border-color: rgba(30, 64, 175, 0.2);
 }
 
 .solution:nth-child(even):hover {
-    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.15);
-    border-color: var(--card-red-dark);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(220, 38, 38, 0.12);
+    border-color: rgba(220, 38, 38, 0.2);
 }
 
 .solution h3 {
@@ -1490,16 +1509,16 @@ h2::after {
     background: var(--bg-white);
     padding: 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 2px solid var(--card-blue);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(30, 64, 175, 0.1);
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
 .service-card:nth-child(even) {
-    border-color: var(--card-red);
+    border-color: rgba(220, 38, 38, 0.1);
 }
 
 .service-card::before {
@@ -1508,8 +1527,9 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 4px;
     background: linear-gradient(90deg, var(--card-blue) 0%, var(--card-blue-light) 100%);
+    opacity: 0.8;
 }
 
 .service-card:nth-child(even)::before {
@@ -1517,14 +1537,14 @@ h2::after {
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.15);
-    border-color: var(--card-blue-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(30, 64, 175, 0.12);
+    border-color: rgba(30, 64, 175, 0.2);
 }
 
 .service-card:nth-child(even):hover {
-    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.15);
-    border-color: var(--card-red-dark);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(220, 38, 38, 0.12);
+    border-color: rgba(220, 38, 38, 0.2);
 }
 
 .service-icon {
@@ -2413,6 +2433,49 @@ footer {
         padding: 8px 12px;
         font-size: 0.85rem;
         max-width: 200px;
+    }
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+    color: white;
+}
+
+.whatsapp-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     }
 }
 
