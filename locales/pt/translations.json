@@ -141,21 +141,31 @@
     }
   },
   "contact": {
-    "title": "Entre em Contato",
-    "subtitle": "Estamos prontos para atender suas necessidades. Entre em contato conosco.",
+    "title": "CONTATO",
+    "subtitle": "ENTRE EM CONTATO AGORA MESMO E ENCONTRAREMOS A MELHOR SOLUÇÃO PARA A SUA EMPRESA.",
     "form": {
+      "title": "Envie sua mensagem e retornaremos o quanto antes.",
       "name": "Nome",
-      "email": "E-mail",
+      "email": "Email",
       "phone": "Telefone",
       "company": "Empresa",
       "message": "Mensagem",
-      "send": "Enviar Mensagem"
+      "send": "Enviar Mensagem",
+      "requestType": "Tipo de Solicitação",
+      "budget": "Solicitar Orçamento",
+      "support": "Suporte Técnico",
+      "consulting": "Consultoria",
+      "training": "Treinamento",
+      "others": "Outros",
+      "productInterest": "Produto de Interesse (opcional)",
+      "subject": "Assunto"
     },
     "info": {
-      "address": "Endereço",
-      "addressValue": "Av. Nova Independência, 87 - Cidade Monções, São Paulo - SP, 04570-000",
-      "phone": "Telefone",
-      "email": "E-mail",
+      "address": "ENDEREÇO",
+      "addressValue": "Av. Nova Independência, 87 cj32<br>Cidade Monções, São Paulo - SP",
+      "phone": "TELEFONE",
+      "email": "EMAIL",
+      "whatsapp": "WHATSAPP",
       "hours": "Horário de Funcionamento",
       "hoursValue": "Segunda a Sexta: 8h às 18h"
     }
