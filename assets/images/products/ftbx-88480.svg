@@ -1,0 +1,37 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="productGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#productGradient2)" rx="12"/>
+  
+  <!-- Product container -->
+  <rect x="50" y="50" width="300" height="200" fill="white" rx="8" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Test equipment body -->
+  <rect x="80" y="100" width="240" height="120" fill="#dc2626" rx="6"/>
+  
+  <!-- Display screen -->
+  <rect x="100" y="120" width="200" height="60" fill="#1f2937" rx="4"/>
+  <rect x="105" y="125" width="190" height="50" fill="#10b981" rx="2"/>
+  
+  <!-- Status indicators -->
+  <circle cx="120" cy="200" r="8" fill="#10b981"/>
+  <circle cx="150" cy="200" r="8" fill="#f59e0b"/>
+  <circle cx="180" cy="200" r="8" fill="#ef4444"/>
+  
+  <!-- Network ports -->
+  <rect x="220" y="190" width="80" height="20" fill="#374151" rx="2"/>
+  <rect x="225" y="195" width="10" height="10" fill="#6b7280" rx="1"/>
+  <rect x="240" y="195" width="10" height="10" fill="#6b7280" rx="1"/>
+  <rect x="255" y="195" width="10" height="10" fill="#6b7280" rx="1"/>
+  <rect x="270" y="195" width="10" height="10" fill="#6b7280" rx="1"/>
+  
+  <!-- Product label -->
+  <text x="200" y="250" font-family="Arial" font-size="16" fill="#dc2626" font-weight="bold" text-anchor="middle">FTBx-88480</text>
+  <text x="200" y="270" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">Testadores compactos de 400G</text>
+</svg>

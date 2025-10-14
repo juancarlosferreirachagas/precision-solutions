@@ -1,0 +1,19 @@
+# Ignore development files
+node_modules/
+.git/
+.gitignore
+README.md
+INSTRUÇÕES.md
+config.json
+
+# Ignore temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
