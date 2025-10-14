@@ -2253,11 +2253,12 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        padding: 0.3rem 0;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0;
+        transition: left 0.3s ease;
         z-index: 9999;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         border-right: 2px solid rgba(30, 64, 175, 0.2);
+        overflow-y: auto;
     }
     
     
@@ -2313,18 +2314,13 @@ footer {
         padding: 0.7rem 1.2rem;
         color: var(--primary);
         font-weight: 600;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border-left: 3px solid transparent;
-        position: relative;
         background: #ffffff;
         margin: 0;
-        border-radius: 0;
-        border: none;
         border-bottom: 1px solid rgba(30, 64, 175, 0.1);
         cursor: pointer;
-        pointer-events: auto;
-        z-index: 10;
         text-decoration: none;
+        position: relative;
+        z-index: 100;
     }
     
     .nav-menu a:hover {
@@ -2447,16 +2443,13 @@ footer {
         font-size: 0.9rem;
         color: var(--text);
         font-weight: 500;
-        transition: all 0.3s ease;
-        border-radius: 0;
         margin: 0;
         background: #ffffff;
-        border: none;
         border-bottom: 1px solid rgba(30, 64, 175, 0.08);
         cursor: pointer;
-        pointer-events: auto;
-        z-index: 10;
         text-decoration: none;
+        position: relative;
+        z-index: 100;
     }
     
     .dropdown-menu a:hover {
