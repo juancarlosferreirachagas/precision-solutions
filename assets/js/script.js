@@ -15,11 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.nav-overlay');
 
     if (hamburger && navMenu && overlay) {
+        // Adicionar eventos para touch e click
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             overlay.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             console.log('Menu clicked'); // Debug
+        });
+        
+        hamburger.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            console.log('Menu touched'); // Debug
         });
 
         // Fechar menu ao clicar no overlay
@@ -31,11 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Fechar menu ao clicar em link
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', (e) => {
+            const handleLinkClick = (e) => {
                 console.log('Link clicked:', link.textContent, link.href); // Debug
-                navMenu.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
                 
                 // Se for link interno (#), fazer scroll suave
                 if (link.getAttribute('href').startsWith('#')) {
@@ -48,6 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     }
                 }
+                
+                // Fechar menu após um pequeno delay para permitir navegação
+                setTimeout(() => {
+                    navMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 100);
+            };
+            
+            // Adicionar eventos para click e touch
+            link.addEventListener('click', handleLinkClick);
+            link.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                handleLinkClick(e);
             });
         });
     }
@@ -62,12 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownToggle.addEventListener('click', (e) => {
                 e.preventDefault();
                 dropdownMenu.classList.toggle('active');
+                console.log('Dropdown toggled:', dropdownToggle.textContent); // Debug
                 
                 // Fechar outros dropdowns
                 dropdowns.forEach(otherDropdown => {
                     if (otherDropdown !== dropdown) {
-                        otherDropdown.querySelector('.dropdown-menu').classList.remove('active');
+                        const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+                        if (otherMenu) {
+                            otherMenu.classList.remove('active');
+                        }
                     }
+                });
+            });
+            
+            // Adicionar eventos aos links do dropdown
+            dropdownMenu.querySelectorAll('a').forEach(dropdownLink => {
+                dropdownLink.addEventListener('click', (e) => {
+                    console.log('Dropdown link clicked:', dropdownLink.textContent, dropdownLink.href); // Debug
+                    
+                    // Fechar menu após um pequeno delay
+                    setTimeout(() => {
+                        navMenu.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }, 100);
                 });
             });
         }
