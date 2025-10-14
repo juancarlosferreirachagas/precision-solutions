@@ -460,6 +460,57 @@ nav {
     position: relative;
 }
 
+/* Language Switcher */
+.language-switcher {
+    position: relative;
+}
+
+.lang-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 120px;
+}
+
+.lang-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-menu li {
+    margin: 0;
+}
+
+.lang-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-menu a:hover {
+    background: var(--gray);
+    color: var(--primary);
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -2407,6 +2458,46 @@ footer {
     }
     
     .dropdown-menu a:hover {
+        background: rgba(30, 64, 175, 0.1);
+        color: var(--primary);
+        transform: translateX(6px);
+        box-shadow: 0 1px 5px rgba(30, 64, 175, 0.15);
+    }
+    
+    /* Language Switcher Mobile */
+    .language-switcher {
+        position: relative;
+    }
+    
+    .lang-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(30, 64, 175, 0.05);
+        margin: 0.1rem 0 0 1rem;
+        border-radius: 6px;
+        border-left: 2px solid var(--card-blue);
+    }
+    
+    .lang-menu a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        color: var(--text);
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-radius: 0;
+        margin: 0;
+        background: #ffffff;
+        border: none;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.08);
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 1;
+    }
+    
+    .lang-menu a:hover {
         background: rgba(30, 64, 175, 0.1);
         color: var(--primary);
         transform: translateX(6px);

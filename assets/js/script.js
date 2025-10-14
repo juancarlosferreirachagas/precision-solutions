@@ -31,10 +31,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Fechar menu ao clicar em link
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                console.log('Link clicked:', link.textContent, link.href); // Debug
                 navMenu.classList.remove('active');
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
+                
+                // Se for link interno (#), fazer scroll suave
+                if (link.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
             });
         });
     }
@@ -59,6 +72,40 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // Language Switcher
+    const langSwitcher = document.querySelector('.language-switcher');
+    if (langSwitcher) {
+        const langToggle = langSwitcher.querySelector('.lang-toggle');
+        const langMenu = langSwitcher.querySelector('.lang-menu');
+        
+        if (langToggle && langMenu) {
+            langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                langMenu.classList.toggle('active');
+                console.log('Language menu toggled'); // Debug
+            });
+            
+            // Fechar menu de idiomas ao clicar em um idioma
+            langMenu.querySelectorAll('a').forEach(langLink => {
+                langLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const selectedLang = langLink.getAttribute('data-lang');
+                    console.log('Language selected:', selectedLang); // Debug
+                    
+                    // Atualizar o texto do toggle
+                    langToggle.textContent = selectedLang.toUpperCase();
+                    
+                    // Fechar menu
+                    langMenu.classList.remove('active');
+                    
+                    // Aqui você pode implementar a lógica de mudança de idioma
+                    // Por exemplo, recarregar a página com parâmetro de idioma
+                    // window.location.href = `?lang=${selectedLang}`;
+                });
+            });
+        }
+    }
 
     // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
