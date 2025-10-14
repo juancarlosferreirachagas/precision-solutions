@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M32 4L40 12H48V20L56 28L48 36V44H40L32 52L24 44H16V36L8 28L16 20V12H24L32 4Z" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <circle cx="32" cy="28" r="8" stroke="#1e40af" stroke-width="2" fill="none"/>
+  <path d="M28 28L30 30L36 24" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="48" text-anchor="middle" font-family="Arial" font-size="8" fill="#1e40af">ANATEL</text>
+</svg>
