@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            console.log('Menu clicked'); // Debug
         });
 
         // Fechar menu ao clicar em link
@@ -16,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-});
 
     // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
-});
 
     // Funcionalidade dos produtos
     // Botões de orçamento
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
     // Animação de scroll
     const observerOptions = {
