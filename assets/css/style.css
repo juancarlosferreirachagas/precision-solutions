@@ -2246,7 +2246,7 @@ footer {
     }
     
     .nav-menu li {
-        margin: 0.05rem 0;
+        margin: 0;
         border-bottom: none;
         position: relative;
     }
@@ -2255,20 +2255,6 @@ footer {
         border-bottom: none;
     }
     
-    .nav-menu li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 0;
-        background: linear-gradient(135deg, var(--card-blue) 0%, var(--card-red) 100%);
-        transition: width 0.3s ease;
-    }
-    
-    .nav-menu li:hover::before {
-        width: 4px;
-    }
     
     .nav-menu a {
         display: block;
@@ -2280,9 +2266,13 @@ footer {
         border-left: 3px solid transparent;
         position: relative;
         background: #ffffff;
-        margin: 0.05rem 0.5rem;
-        border-radius: 6px;
-        border: 1px solid rgba(30, 64, 175, 0.1);
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.1);
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 1;
     }
     
     .nav-menu a:hover {
@@ -2406,10 +2396,14 @@ footer {
         color: var(--text);
         font-weight: 500;
         transition: all 0.3s ease;
-        border-radius: 4px;
-        margin: 0.05rem 0.2rem;
+        border-radius: 0;
+        margin: 0;
         background: #ffffff;
-        border: 1px solid rgba(30, 64, 175, 0.08);
+        border: none;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.08);
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 1;
     }
     
     .dropdown-menu a:hover {
