@@ -74,21 +74,21 @@
       }
     },
     "mission": {
-      "title": "Missão",
-      "description": "Proporcionar excelência na gestão de redes e aplicações através de soluções tecnológicas inovadoras e serviços de alta qualidade."
+      "title": "NOSSA MISSÃO",
+      "description": "Prover serviços e produtos no setor de tecnologia da informação e telecomunicações para suportar nossos clientes em seus desafios e objetivos"
     },
     "vision": {
-      "title": "Visão",
-      "description": "Ser referência nacional em soluções tecnológicas para telecomunicações, reconhecida pela excelência e inovação."
+      "title": "NOSSA VISÃO",
+      "description": "Ser líder e referência no setor telecomunicações para implantação, monitoração e certificação de redes através da busca incansável de conhecimento pioneiro e qualidade sem limite."
     },
     "values": {
-      "title": "Valores",
+      "title": "NOSSOS VALORES",
       "items": [
-        "Excelência técnica e operacional",
-        "Inovação constante",
-        "Compromisso com a qualidade",
-        "Transparência e ética",
-        "Foco no cliente"
+        "Compromisso e satisfação total dos nossos clientes",
+        "Confiabilidade visando ausência de falhas",
+        "Valorização e respeito às pessoas",
+        "Ética, honestidade e seriedade",
+        "Responsabilidade social"
       ]
     }
   },
@@ -122,22 +122,22 @@
     }
   },
   "solutions": {
-    "title": "Nossas Soluções",
-    "network": {
-      "title": "Soluções de Rede",
-      "description": "Implementamos e gerenciamos redes de alta performance com tecnologia de ponta."
+    "title": "NOSSAS SOLUÇÕES TECNOLÓGICAS",
+    "testing": {
+      "title": "Teste e Medição",
+      "description": "Soluções completas para teste e medição de redes de fibra óptica, incluindo OTDR, OLTS e equipamentos de certificação."
     },
     "monitoring": {
-      "title": "Monitoramento Avançado",
-      "description": "Sistemas de monitoramento em tempo real para garantir a disponibilidade dos seus serviços."
+      "title": "Monitoramento de Redes",
+      "description": "Sistemas avançados de monitoramento 24/7 para garantir máxima disponibilidade e performance das redes."
     },
-    "security": {
-      "title": "Segurança de Rede",
-      "description": "Proteção completa da sua infraestrutura com as melhores práticas de segurança."
+    "certification": {
+      "title": "Certificação ANATEL",
+      "description": "Laboratório acreditado para certificação de equipamentos conforme padrões ANATEL e ISO 17025."
     },
-    "cloud": {
-      "title": "Soluções em Nuvem",
-      "description": "Migração e gerenciamento de serviços em ambientes cloud híbridos e públicos."
+    "consulting": {
+      "title": "Consultoria Especializada",
+      "description": "Consultoria técnica especializada em telecomunicações, redes e infraestrutura de alta performance."
     }
   },
   "contact": {
@@ -172,7 +172,7 @@
   },
   "footer": {
     "description": "Precision Solutions - Excelência em Soluções Tecnológicas",
-    "rights": "Todos os direitos reservados.",
+    "rights": "PRECISION SOLUTIONS © Todos os direitos reservados. Implementação de conteúdo e material fornecidos pelo administrador.",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso"
   },

@@ -74,21 +74,21 @@
       }
     },
     "mission": {
-      "title": "Mission",
-      "description": "To provide excellence in network and application management through innovative technological solutions and high-quality services."
+      "title": "OUR MISSION",
+      "description": "To provide services and products in the information technology and telecommunications sector to support our clients in their challenges and objectives"
     },
     "vision": {
-      "title": "Vision",
-      "description": "To be a national reference in technological solutions for telecommunications, recognized for excellence and innovation."
+      "title": "OUR VISION",
+      "description": "To be a leader and reference in the telecommunications sector for network implementation, monitoring and certification through the relentless pursuit of pioneering knowledge and unlimited quality."
     },
     "values": {
-      "title": "Values",
+      "title": "OUR VALUES",
       "items": [
-        "Technical and operational excellence",
-        "Constant innovation",
-        "Commitment to quality",
-        "Transparency and ethics",
-        "Customer focus"
+        "Commitment and total satisfaction of our clients",
+        "Reliability aiming at absence of failures",
+        "Valuing and respecting people",
+        "Ethics, honesty and seriousness",
+        "Social responsibility"
       ]
     }
   },
@@ -122,22 +122,22 @@
     }
   },
   "solutions": {
-    "title": "Our Solutions",
-    "network": {
-      "title": "Network Solutions",
-      "description": "We implement and manage high-performance networks with cutting-edge technology."
+    "title": "OUR TECHNOLOGICAL SOLUTIONS",
+    "testing": {
+      "title": "Testing and Measurement",
+      "description": "Complete solutions for testing and measurement of fiber optic networks, including OTDR, OLTS and certification equipment."
     },
     "monitoring": {
-      "title": "Advanced Monitoring",
-      "description": "Real-time monitoring systems to ensure availability of your services."
+      "title": "Network Monitoring",
+      "description": "Advanced 24/7 monitoring systems to ensure maximum network availability and performance."
     },
-    "security": {
-      "title": "Network Security",
-      "description": "Complete protection of your infrastructure with the best security practices."
+    "certification": {
+      "title": "ANATEL Certification",
+      "description": "Accredited laboratory for equipment certification according to ANATEL and ISO 17025 standards."
     },
-    "cloud": {
-      "title": "Cloud Solutions",
-      "description": "Migration and management of services in hybrid and public cloud environments."
+    "consulting": {
+      "title": "Specialized Consulting",
+      "description": "Specialized technical consulting in telecommunications, networks and high-performance infrastructure."
     }
   },
   "contact": {
@@ -162,7 +162,7 @@
   },
   "footer": {
     "description": "Precision Solutions - Excellence in Technological Solutions",
-    "rights": "All rights reserved.",
+    "rights": "PRECISION SOLUTIONS © All rights reserved. Content implementation and material provided by the administrator.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
   },
