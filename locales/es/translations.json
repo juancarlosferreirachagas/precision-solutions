@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Precision Solutions - Excelencia en Soluciones Tecnológicas",
+    "description": "Proporcionamos excelencia en la gestión de su red y aplicaciones a través de productos y servicios de alta calidad.",
+    "keywords": "telecomunicaciones, tecnología, redes, consultoría, certificación ANATEL"
+  },
+  "navigation": {
+    "home": "INICIO",
+    "about": "QUIÉNES SOMOS",
+    "services": "SERVICIOS",
+    "solutions": "SOLUCIONES",
+    "events": "EVENTOS",
+    "contact": "CONTACTO",
+    "consulting": "Consultoría",
+    "integration": "Integración",
+    "operation": "Operación",
+    "certification": "Certificación",
+    "training": "Capacitación"
+  },
+  "hero": {
+    "title1": "Excelencia en Soluciones Tecnológicas",
+    "subtitle1": "Nuestro objetivo es proporcionar excelencia en la gestión de su red y aplicaciones a través de productos y servicios de alta calidad.",
+    "title2": "Consultoría Especializada",
+    "subtitle2": "Soluciones personalizadas para sus necesidades de red y telecomunicaciones",
+    "title3": "Certificación ANATEL",
+    "subtitle3": "Laboratorio acreditado por CGCRE según ISO 17025 para pruebas de equipos",
+    "title4": "Integración de Redes",
+    "subtitle4": "Implementación y validación de redes multiservicio con tecnología de vanguardia",
+    "cta": "Ponte en Contacto"
+  },
+  "differentials": {
+    "title": "Diferenciadores Precision Solutions",
+    "professional": {
+      "title": "Profesionales Altamente Calificados",
+      "description": "Equipo especializado con décadas de experiencia en telecomunicaciones y tecnología de la información."
+    },
+    "technology": {
+      "title": "Tecnología de Vanguardia",
+      "description": "Utilizamos las herramientas y equipos más modernos para garantizar la excelencia en nuestros servicios."
+    },
+    "support": {
+      "title": "Soporte 24/7",
+      "description": "Nuestro equipo está siempre disponible para atender sus necesidades y garantizar la continuidad de sus servicios."
+    },
+    "certification": {
+      "title": "Certificación ANATEL",
+      "description": "Laboratorio acreditado por CGCRE según ISO 17025, garantizando calidad y confiabilidad en nuestras pruebas."
+    }
+  },
+  "about": {
+    "title": "Quiénes Somos",
+    "description": "Precision Solutions es una empresa especializada en proporcionar soluciones tecnológicas que permiten visibilidad, pruebas, monitoreo y optimización de redes en los segmentos de telecomunicaciones, electrónica, energía y tecnología de la información. Basados en décadas de experiencia, nuestro equipo de profesionales está siempre disponible para entender las necesidades de nuestros clientes y de forma consultiva definir la mejor estrategia para atender las demandas de pruebas y medición, implementación de redes multiservicio y certificación de equipos.",
+    "mission": {
+      "title": "Misión",
+      "description": "Proporcionar excelencia en la gestión de redes y aplicaciones a través de soluciones tecnológicas innovadoras y servicios de alta calidad."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Ser referencia nacional en soluciones tecnológicas para telecomunicaciones, reconocida por la excelencia e innovación."
+    },
+    "values": {
+      "title": "Valores",
+      "items": [
+        "Excelencia técnica y operacional",
+        "Innovación constante",
+        "Compromiso con la calidad",
+        "Transparencia y ética",
+        "Enfoque en el cliente"
+      ]
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "consulting": {
+      "title": "Consultoría en Redes",
+      "description": "Contamos con un portafolio extenso de servicios de consultoría para atender las necesidades de nuestros clientes. Entre los servicios que realizamos:",
+      "items": [
+        "Diseño de redes backbone y FTTX",
+        "Pruebas de rendimiento en redes de transporte y L2/L3 hasta 400Gbps",
+        "Monitoreo de redes hasta capa 7 y operación"
+      ]
+    },
+    "integration": {
+      "title": "Integración de Redes",
+      "description": "Los servicios de Integración de Redes Multiservicio de Precision Solutions permiten que su empresa tenga una planificación, implementación, certificación y validación de la red de forma organizada y siguiendo el estado del arte en cada tecnología involucrada. Nuestros profesionales poseen experiencia en proyectos de alta complejidad y de misión crítica. Podemos auxiliar a cada cliente en diversas fases del proyecto desde la ingeniería hasta la validación de la red."
+    },
+    "operation": {
+      "title": "Operación y Mantenimiento de Redes",
+      "description": "Únase al conjunto de empresas que confían en nuestros servicios de Operación y Mantenimiento de Redes. A través de un equipo extremadamente capacitado proporcionamos diagnósticos rápidos y principalmente asertivos lo que permite la realización de un troubleshooting eficiente y eficaz. Ya sea a través de nuestro NOC que proporciona soporte Nivel 3 o de nuestro equipo de Field Services trabajamos 24x7 todos los días para que su empresa y sus clientes tengan el menor impacto posible."
+    },
+    "certification": {
+      "title": "Certificación ANATEL",
+      "description": "Precision Solutions posee Laboratorio de Ensayos para certificación ANATEL. Somos acreditados por CGCRE según ISO 17025. Nuestro alcance de ensayos es bastante completo y puede ser consultado en el enlace a continuación. Como diferencial proporcionamos servicio de calidad unido a flexibilidad y agilidad en los ensayos.",
+      "scope": "Haga clic aquí para visualizar nuestro Alcance Acreditado"
+    },
+    "training": {
+      "title": "Capacitación en Tecnología",
+      "description": "A través de nuestras capacitaciones compartimos las mejores prácticas y conceptos absorbidos en años de experiencia en el segmento de telecomunicaciones y tecnología de la información. Además de la base teórica enriquecemos las capacitaciones con la aplicación práctica del concepto enseñado permitiendo así una visión mucho más completa del asunto."
+    }
+  },
+  "solutions": {
+    "title": "Nuestras Soluciones",
+    "network": {
+      "title": "Soluciones de Red",
+      "description": "Implementamos y gestionamos redes de alto rendimiento con tecnología de vanguardia."
+    },
+    "monitoring": {
+      "title": "Monitoreo Avanzado",
+      "description": "Sistemas de monitoreo en tiempo real para garantizar la disponibilidad de sus servicios."
+    },
+    "security": {
+      "title": "Seguridad de Red",
+      "description": "Protección completa de su infraestructura con las mejores prácticas de seguridad."
+    },
+    "cloud": {
+      "title": "Soluciones en la Nube",
+      "description": "Migración y gestión de servicios en entornos cloud híbridos y públicos."
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Estamos listos para atender sus necesidades. Contáctenos.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje"
+    },
+    "info": {
+      "address": "Dirección",
+      "addressValue": "Av. Nova Independência, 87 - Cidade Monções, São Paulo - SP, 04570-000",
+      "phone": "Teléfono",
+      "email": "Correo Electrónico",
+      "hours": "Horario de Funcionamiento",
+      "hoursValue": "Lunes a Viernes: 8h a 18h"
+    }
+  },
+  "footer": {
+    "description": "Precision Solutions - Excelencia en Soluciones Tecnológicas",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso"
+  },
+  "buttons": {
+    "learnMore": "Saber Más",
+    "contactUs": "Contáctanos",
+    "viewMore": "Ver Más",
+    "download": "Descargar",
+    "readMore": "Leer Más"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  }
+}

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/i18n.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -21,23 +22,23 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">QUEM SOMOS</a></li>
+                <li><a href="#home" data-i18n="navigation.home">HOME</a></li>
+                <li><a href="#about" data-i18n="navigation.about">QUEM SOMOS</a></li>
                 <li class="dropdown">
-                    <a href="#services">SERVIÇOS</a>
+                    <a href="#services" data-i18n="navigation.services">SERVIÇOS</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/consultoria.html">Consultoria</a></li>
-                        <li><a href="pages/integracao.html">Integração</a></li>
-                        <li><a href="pages/operacao.html">Operação</a></li>
-                        <li><a href="pages/certificacao.html">Certificação</a></li>
-                        <li><a href="pages/treinamento.html">Treinamento</a></li>
+                        <li><a href="pages/consultoria.html" data-i18n="navigation.consulting">Consultoria</a></li>
+                        <li><a href="pages/integracao.html" data-i18n="navigation.integration">Integração</a></li>
+                        <li><a href="pages/operacao.html" data-i18n="navigation.operation">Operação</a></li>
+                        <li><a href="pages/certificacao.html" data-i18n="navigation.certification">Certificação</a></li>
+                        <li><a href="pages/treinamento.html" data-i18n="navigation.training">Treinamento</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#solutions">SOLUÇÕES</a>
+                    <a href="#solutions" data-i18n="navigation.solutions">SOLUÇÕES</a>
                 </li>
-                <li><a href="pages/eventos.html">EVENTOS</a></li>
-                <li><a href="#contact">CONTATO</a></li>
+                <li><a href="pages/eventos.html" data-i18n="navigation.events">EVENTOS</a></li>
+                <li><a href="#contact" data-i18n="navigation.contact">CONTATO</a></li>
                 <li class="language-switcher">
                     <a href="#" class="lang-toggle">PT</a>
                     <ul class="lang-menu">
@@ -67,30 +68,30 @@
         <div class="container">
             <div class="hero-carousel">
                 <div class="carousel-slide active">
-                    <h1>Excelência em Soluções Tecnológicas</h1>
-                    <p>Nosso objetivo é proporcionar excelência na gestão da sua rede e aplicações através de produtos e serviços de alta qualidade.</p>
+                    <h1 data-i18n="hero.title1">Excelência em Soluções Tecnológicas</h1>
+                    <p data-i18n="hero.subtitle1">Nosso objetivo é proporcionar excelência na gestão da sua rede e aplicações através de produtos e serviços de alta qualidade.</p>
                 </div>
                 <div class="carousel-slide">
-                    <h1>Consultoria Especializada</h1>
-                    <p>Soluções personalizadas para suas necessidades de rede e telecomunicações</p>
+                    <h1 data-i18n="hero.title2">Consultoria Especializada</h1>
+                    <p data-i18n="hero.subtitle2">Soluções personalizadas para suas necessidades de rede e telecomunicações</p>
                 </div>
                 <div class="carousel-slide">
-                    <h1>Certificação ANATEL</h1>
-                    <p>Laboratório acreditado pela CGCRE conforme ISO 17025 para ensaios de equipamentos</p>
+                    <h1 data-i18n="hero.title3">Certificação ANATEL</h1>
+                    <p data-i18n="hero.subtitle3">Laboratório acreditado pela CGCRE conforme ISO 17025 para ensaios de equipamentos</p>
                 </div>
                 <div class="carousel-slide">
-                    <h1>Integração de Redes</h1>
-                    <p>Implantação e validação de redes multisserviços com tecnologia de ponta</p>
+                    <h1 data-i18n="hero.title4">Integração de Redes</h1>
+                    <p data-i18n="hero.subtitle4">Implantação e validação de redes multisserviços com tecnologia de ponta</p>
                 </div>
             </div>
-            <a href="#contact" class="btn">Entre em Contato</a>
+            <a href="#contact" class="btn" data-i18n="hero.cta">Entre em Contato</a>
         </div>
     </section>
 
     <!-- Diferenciais -->
     <section class="differentials">
         <div class="container">
-            <h2>Diferenciais Precision Solutions</h2>
+            <h2 data-i18n="differentials.title">Diferenciais Precision Solutions</h2>
             <div class="differentials-grid">
                 <div class="differential">
                     <div class="differential-icon">
@@ -99,8 +100,8 @@
                             <circle cx="12" cy="7" r="4"/>
                         </svg>
                     </div>
-                    <h3>Profissionais Altamente Qualificados</h3>
-                    <p>Time especializado com décadas de experiência em telecomunicações e tecnologia da informação.</p>
+                    <h3 data-i18n="differentials.professional.title">Profissionais Altamente Qualificados</h3>
+                    <p data-i18n="differentials.professional.description">Time especializado com décadas de experiência em telecomunicações e tecnologia da informação.</p>
                 </div>
                 <div class="differential">
                     <div class="differential-icon">

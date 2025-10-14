@@ -52,4 +52,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Language Switcher
+    const langSwitcher = document.querySelector('.language-switcher');
+    if (langSwitcher) {
+        const langToggle = langSwitcher.querySelector('.lang-toggle');
+        const langMenu = langSwitcher.querySelector('.lang-menu');
+        
+        if (langToggle && langMenu) {
+            langToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Language toggle clicked');
+                langMenu.classList.toggle('active');
+            });
+            
+            langMenu.querySelectorAll('a').forEach(function(langLink) {
+                langLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = langLink.getAttribute('data-lang');
+                    console.log('Language selected:', selectedLang);
+                    
+                    // Usar sistema de internacionalização
+                    if (window.i18n) {
+                        window.i18n.changeLanguage(selectedLang);
+                    }
+                    
+                    langMenu.classList.remove('active');
+                });
+            });
+        }
+    }
 });
