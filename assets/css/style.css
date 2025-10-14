@@ -1828,6 +1828,10 @@ footer {
 
 /* Responsivo */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
     .logo img {
         height: 40px;
     }
@@ -1848,22 +1852,52 @@ footer {
         align-items: center;
         padding-top: 2rem;
         transition: left 0.3s;
+        z-index: 1000;
     }
     
     .nav-menu.active {
         left: 0;
     }
     
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .hero {
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
     
     .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero .btn {
+        padding: 12px 24px;
         font-size: 1rem;
     }
     
     h2 {
         font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .section-intro {
+        text-align: center;
+        margin-bottom: 3rem;
     }
     
     .contact-content {
@@ -1873,23 +1907,28 @@ footer {
     
     .differentials-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .solutions-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .mission-vision {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
     }
     
     .product-grid {
@@ -1910,6 +1949,22 @@ footer {
         background: var(--gray);
         margin-top: 0.5rem;
     }
+    
+    /* Melhorias para cards */
+    .service-card, .differential-card, .solution-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card h3, .differential-card h3, .solution-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card p, .differential-card p, .solution-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1927,6 +1982,75 @@ footer {
     
     .footer-logo img {
         height: 35px;
+    }
+    
+    /* Hero melhorado para mobile pequeno */
+    .hero {
+        padding: 60px 0 40px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Títulos menores */
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Cards mais compactos */
+    .service-card, .differential-card, .solution-card {
+        padding: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .service-card h3, .differential-card h3, .solution-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .service-card p, .differential-card p, .solution-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Botões responsivos */
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+        margin: 0.5rem auto;
+        display: block;
+    }
+    
+    /* Formulários */
+    .form-group input, .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
     }
     
     /* Sidebar Navigation Responsive */
@@ -2104,6 +2228,39 @@ footer {
     .map-btn {
         width: 100%;
         min-width: auto;
+    }
+}
+
+/* Mobile muito pequeno (320px) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .service-card, .differential-card, .solution-card {
+        padding: 1rem;
+    }
+    
+    .service-card h3, .differential-card h3, .solution-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        max-width: 200px;
     }
 }
 
