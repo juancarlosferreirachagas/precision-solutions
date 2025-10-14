@@ -48,8 +48,31 @@
     }
   },
   "about": {
-    "title": "Quiénes Somos",
+    "title": "SOBRE PRECISION SOLUTIONS",
     "description": "Precision Solutions es una empresa especializada en proporcionar soluciones tecnológicas que permiten visibilidad, pruebas, monitoreo y optimización de redes en los segmentos de telecomunicaciones, electrónica, energía y tecnología de la información. Basados en décadas de experiencia, nuestro equipo de profesionales está siempre disponible para entender las necesidades de nuestros clientes y de forma consultiva definir la mejor estrategia para atender las demandas de pruebas y medición, implementación de redes multiservicio y certificación de equipos.",
+    "trajectory": {
+      "title": "TRAYECTORIA",
+      "foundation": {
+        "year": "2003",
+        "title": "Fundación Precision",
+        "description": "Nace Precision Solutions con enfoque en proporcionar servicios y productos en telecomunicaciones con excelencia ilimitada"
+      },
+      "accreditation": {
+        "year": "2011",
+        "title": "Acreditación",
+        "description": "Precision Solutions logra acreditación de calidad ISO17025"
+      },
+      "expansion": {
+        "year": "2014",
+        "title": "Expansión",
+        "description": "Ampliación de servicios y consolidación en el mercado nacional"
+      },
+      "innovation": {
+        "year": "2020",
+        "title": "Innovación",
+        "description": "Implementación de nuevas tecnologías y soluciones digitales"
+      }
+    },
     "mission": {
       "title": "Misión",
       "description": "Proporcionar excelencia en la gestión de redes y aplicaciones a través de soluciones tecnológicas innovadoras y servicios de alta calidad."
