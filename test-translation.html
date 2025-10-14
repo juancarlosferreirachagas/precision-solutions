@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Tradução - Precision Solutions</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        .lang-buttons { margin: 10px 0; }
+        .lang-buttons button { margin: 5px; padding: 10px 20px; }
+        .translation-test { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Teste do Sistema de Tradução</h1>
+    
+    <div class="lang-buttons">
+        <button onclick="testChangeLanguage('pt')">Português</button>
+        <button onclick="testChangeLanguage('en')">English</button>
+        <button onclick="testChangeLanguage('es')">Español</button>
+    </div>
+    
+    <div class="test-section">
+        <h2 data-i18n="hero.title1">Excelência em Soluções Tecnológicas</h2>
+        <p data-i18n="hero.subtitle1">Nosso objetivo é proporcionar excelência na gestão da sua rede e aplicações através de produtos e serviços de alta qualidade.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2 data-i18n="navigation.home">HOME</h2>
+        <p data-i18n="navigation.about">QUEM SOMOS</p>
+        <p data-i18n="navigation.services">SERVIÇOS</p>
+    </div>
+    
+    <div class="test-section">
+        <h2 data-i18n="about.title">SOBRE A PRECISION SOLUTIONS</h2>
+        <p data-i18n="about.description">A Precision Solutions é uma empresa especializada...</p>
+    </div>
+    
+    <div class="translation-test">
+        <h3>Status do Sistema:</h3>
+        <p id="status">Carregando...</p>
+        <p id="current-lang">Idioma atual: -</p>
+    </div>
+
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        function testChangeLanguage(lang) {
+            console.log('Testando mudança para:', lang);
+            if (window.i18n) {
+                window.i18n.changeLanguage(lang);
+                document.getElementById('current-lang').textContent = `Idioma atual: ${lang}`;
+            } else {
+                console.error('Sistema i18n não encontrado!');
+                document.getElementById('status').textContent = '❌ Sistema i18n não encontrado!';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                if (window.i18n) {
+                    document.getElementById('status').textContent = '✅ Sistema i18n carregado!';
+                    document.getElementById('current-lang').textContent = `Idioma atual: ${window.i18n.getCurrentLanguage()}`;
+                } else {
+                    document.getElementById('status').textContent = '❌ Sistema i18n não carregado!';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,12 @@ class I18n {
     constructor() {
         this.currentLanguage = this.getStoredLanguage() || 'pt';
         this.translations = {};
-        this.loadTranslations();
+        this.init();
+    }
+
+    async init() {
+        await this.loadTranslations();
+        this.applyTranslations();
     }
 
     // Obter idioma armazenado no localStorage
@@ -20,16 +25,21 @@ class I18n {
     async loadTranslations() {
         try {
             const response = await fetch(`locales/${this.currentLanguage}/translations.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             this.translations = await response.json();
-            this.applyTranslations();
-            console.log(`Traduções carregadas para: ${this.currentLanguage}`);
+            console.log(`✅ Traduções carregadas para: ${this.currentLanguage}`);
+            return true;
         } catch (error) {
-            console.error('Erro ao carregar traduções:', error);
+            console.error('❌ Erro ao carregar traduções:', error);
             // Fallback para português
             if (this.currentLanguage !== 'pt') {
+                console.log('🔄 Tentando carregar português como fallback...');
                 this.currentLanguage = 'pt';
-                this.loadTranslations();
+                return await this.loadTranslations();
             }
+            return false;
         }
     }
 
@@ -114,14 +124,20 @@ class I18n {
     async changeLanguage(lang) {
         if (lang === this.currentLanguage) return;
         
+        console.log(`🔄 Mudando idioma para: ${lang}`);
         this.currentLanguage = lang;
         this.setStoredLanguage(lang);
-        await this.loadTranslations();
         
-        // Disparar evento personalizado
-        document.dispatchEvent(new CustomEvent('languageChanged', {
-            detail: { language: lang }
-        }));
+        const success = await this.loadTranslations();
+        if (success) {
+            this.applyTranslations();
+            console.log(`✅ Idioma alterado para: ${lang}`);
+            
+            // Disparar evento personalizado
+            document.dispatchEvent(new CustomEvent('languageChanged', {
+                detail: { language: lang }
+            }));
+        }
     }
 
     // Atualizar seletor de idiomas
@@ -152,8 +168,9 @@ class I18n {
     }
 }
 
-// Inicializar sistema de internacionalização
-const i18n = new I18n();
-
-// Exportar para uso global
-window.i18n = i18n;
+// Inicializar sistema de internacionalização quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Inicializando sistema de tradução...');
+    window.i18n = new I18n();
+    console.log('✅ Sistema de tradução inicializado!');
+});

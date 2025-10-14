@@ -1,6 +1,6 @@
 // Menu hambúrguer simples
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script loaded');
+    console.log('📱 Script principal carregado');
     
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -75,7 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Usar sistema de internacionalização
                     if (window.i18n) {
+                        console.log('🌍 Mudando idioma via i18n...');
                         window.i18n.changeLanguage(selectedLang);
+                    } else {
+                        console.error('❌ Sistema i18n não encontrado!');
                     }
                     
                     langMenu.classList.remove('active');
