@@ -7,19 +7,27 @@
 
 /* Variáveis - Design Elegante e Profissional */
 :root {
-    /* Cores Principais */
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --secondary: #dc2626;
-    --secondary-dark: #b91c1c;
-    --accent: #3b82f6;
+    /* Cores Principais - Azul e Vermelho Forte */
+    --primary: #1e40af;        /* Azul forte */
+    --primary-dark: #1e3a8a;   /* Azul mais escuro */
+    --primary-light: #3b82f6;  /* Azul claro */
+    --secondary: #dc2626;      /* Vermelho forte */
+    --secondary-dark: #b91c1c; /* Vermelho escuro */
+    --secondary-light: #ef4444; /* Vermelho claro */
+    --accent: #f59e0b;         /* Laranja para destaque */
     --white: #ffffff;
     
-    /* Cores dos Cards - Vermelho Forte */
-    --card-primary: #dc2626;
-    --card-primary-dark: #b91c1c;
-    --card-primary-light: #ef4444;
-    --card-accent: #fef2f2;
+    /* Cores dos Cards - Alternando Azul e Vermelho */
+    --card-blue: #1e40af;
+    --card-blue-dark: #1e3a8a;
+    --card-blue-light: #3b82f6;
+    --card-red: #dc2626;
+    --card-red-dark: #b91c1c;
+    --card-red-light: #ef4444;
+    
+    /* Cores de fundo suaves */
+    --bg-blue-light: #eff6ff;
+    --bg-red-light: #fef2f2;
     
     /* Cores de Texto */
     --text: #1f2937;
@@ -474,7 +482,7 @@ nav {
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(29, 78, 216, 0.9) 100%), url('../images/hero/hero-bg.jpg');
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.85) 0%, rgba(220, 38, 38, 0.8) 100%), url('../images/hero/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -515,23 +523,40 @@ nav {
 /* Botões */
 .btn {
     display: inline-block;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
-    padding: 14px 32px;
+    padding: 16px 36px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 600;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
     font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
 }
 
 /* Seções */
@@ -573,14 +598,19 @@ h2::after {
 
 .differential {
     background: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-soft);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid var(--card-primary);
+    border: 3px solid var(--card-blue);
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.differential:nth-child(even) {
+    border-color: var(--card-red);
 }
 
 .differential::before {
@@ -589,16 +619,25 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--card-primary), var(--card-primary-light));
+    height: 6px;
+    background: linear-gradient(90deg, var(--card-blue), var(--card-blue-light));
     transform: scaleX(1);
     transition: transform 0.3s ease;
 }
 
+.differential:nth-child(even)::before {
+    background: linear-gradient(90deg, var(--card-red), var(--card-red-light));
+}
+
 .differential:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
-    border-color: var(--card-primary-dark);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
+    border-color: var(--card-blue-dark);
+}
+
+.differential:nth-child(even):hover {
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+    border-color: var(--card-red-dark);
 }
 
 .differential:hover::before {
@@ -606,10 +645,14 @@ h2::after {
 }
 
 .differential h3 {
-    color: var(--card-primary);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    color: var(--card-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
+}
+
+.differential:nth-child(even) h3 {
+    color: var(--card-red);
 }
 
 /* About Section - Visual Enhancement */
@@ -1003,13 +1046,19 @@ h2::after {
 
 .solution {
     background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 2.5rem;
+    border-radius: 16px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 2px solid var(--card-primary);
+    border: 2px solid var(--card-blue);
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.solution:nth-child(even) {
+    border-color: var(--card-red);
 }
 
 .solution::before {
@@ -1018,21 +1067,34 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--card-primary), var(--card-primary-light));
+    height: 5px;
+    background: linear-gradient(90deg, var(--card-blue), var(--card-blue-light));
+}
+
+.solution:nth-child(even)::before {
+    background: linear-gradient(90deg, var(--card-red), var(--card-red-light));
 }
 
 .solution:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
-    border-color: var(--card-primary-dark);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.15);
+    border-color: var(--card-blue-dark);
+}
+
+.solution:nth-child(even):hover {
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.15);
+    border-color: var(--card-red-dark);
 }
 
 .solution h3 {
-    color: var(--card-primary);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    color: var(--card-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
+}
+
+.solution:nth-child(even) h3 {
+    color: var(--card-red);
 }
 
 .solution p {
@@ -1426,13 +1488,18 @@ h2::after {
 
 .service-card {
     background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    border: 2px solid var(--card-primary);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid var(--card-blue);
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.service-card:nth-child(even) {
+    border-color: var(--card-red);
 }
 
 .service-card::before {
@@ -1441,28 +1508,46 @@ h2::after {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--card-primary) 0%, var(--card-primary-light) 100%);
+    height: 5px;
+    background: linear-gradient(90deg, var(--card-blue) 0%, var(--card-blue-light) 100%);
+}
+
+.service-card:nth-child(even)::before {
+    background: linear-gradient(90deg, var(--card-red) 0%, var(--card-red-light) 100%);
 }
 
 .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
-    border-color: var(--card-primary-dark);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.15);
+    border-color: var(--card-blue-dark);
+}
+
+.service-card:nth-child(even):hover {
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.15);
+    border-color: var(--card-red-dark);
 }
 
 .service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    color: var(--card-primary);
+    color: var(--card-blue);
+}
+
+.service-card:nth-child(even) .service-icon {
+    color: var(--card-red);
 }
 
 .service-card h3 {
-    color: var(--card-primary);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    color: var(--card-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    text-align: center;
+}
+
+.service-card:nth-child(even) h3 {
+    color: var(--card-red);
 }
 
 .service-card ul {
@@ -1884,13 +1969,14 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: var(--white);
+        background: linear-gradient(135deg, var(--white) 0%, var(--bg-blue-light) 100%);
         flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: left 0.3s;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 2rem 0;
+        transition: left 0.3s ease;
         z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     
     .nav-menu.active {
@@ -1898,12 +1984,29 @@ footer {
     }
     
     .nav-menu li {
-        margin: 1rem 0;
+        margin: 0;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.1);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
     }
     
     .nav-menu a {
+        display: block;
         font-size: 1.1rem;
-        padding: 0.75rem 1.5rem;
+        padding: 1.25rem 2rem;
+        color: var(--primary);
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
+    }
+    
+    .nav-menu a:hover {
+        background: var(--bg-blue-light);
+        color: var(--primary-dark);
+        border-left-color: var(--primary);
+        transform: translateX(8px);
     }
     
     .hero {
@@ -1990,18 +2093,29 @@ footer {
     
     /* Melhorias para cards */
     .service-card, .differential-card, .solution-card {
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
     }
     
     .service-card h3, .differential-card h3, .solution-card h3 {
         font-size: 1.3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
     
     .service-card p, .differential-card p, .solution-card p {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+    
+    /* Melhor espaçamento entre seções */
+    section {
+        padding: 80px 0;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
     }
 }
 
