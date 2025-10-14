@@ -3,17 +3,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Menu mobile
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const navOverlay = document.querySelector('.nav-overlay');
 
-    if (hamburger && navMenu) {
+    // Criar overlay se não existir
+    if (!navOverlay) {
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    const overlay = document.querySelector('.nav-overlay');
+
+    if (hamburger && navMenu && overlay) {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             console.log('Menu clicked'); // Debug
+        });
+
+        // Fechar menu ao clicar no overlay
+        overlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
 
         // Fechar menu ao clicar em link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
     }
