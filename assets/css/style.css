@@ -2249,33 +2249,16 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: #ffffff;
+        background: white;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
         padding: 0;
         transition: left 0.3s ease;
         z-index: 9999;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        border-right: 2px solid rgba(30, 64, 175, 0.2);
-        overflow-y: auto;
     }
     
     
     .nav-menu.active {
         left: 0;
-        animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    @keyframes slideInLeft {
-        from {
-            left: -100%;
-            opacity: 0;
-        }
-        to {
-            left: 0;
-            opacity: 1;
-        }
     }
     
     /* Overlay de fundo para o menu */
@@ -2310,17 +2293,12 @@ footer {
     
     .nav-menu a {
         display: block;
-        font-size: 0.95rem;
-        padding: 0.7rem 1.2rem;
-        color: var(--primary);
-        font-weight: 600;
-        background: #ffffff;
-        margin: 0;
-        border-bottom: 1px solid rgba(30, 64, 175, 0.1);
-        cursor: pointer;
+        padding: 15px 20px;
+        color: #1e40af;
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
         text-decoration: none;
-        position: relative;
-        z-index: 100;
+        cursor: pointer;
     }
     
     .nav-menu a:hover {
@@ -2439,17 +2417,12 @@ footer {
     }
     
     .dropdown-menu a {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        color: var(--text);
-        font-weight: 500;
-        margin: 0;
-        background: #ffffff;
-        border-bottom: 1px solid rgba(30, 64, 175, 0.08);
-        cursor: pointer;
+        padding: 10px 30px;
+        color: #374151;
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
         text-decoration: none;
-        position: relative;
-        z-index: 100;
+        cursor: pointer;
     }
     
     .dropdown-menu a:hover {
