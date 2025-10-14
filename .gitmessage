@@ -1,0 +1,20 @@
+# <tipo>: <descrição>
+
+# <corpo da mensagem>
+
+# <rodapé>
+
+# Tipos de commit:
+# feat: Nova funcionalidade
+# fix: Correção de bug
+# docs: Documentação
+# style: Formatação, espaços, etc.
+# refactor: Refatoração de código
+# test: Adição de testes
+# chore: Tarefas de manutenção
+
+# Exemplos:
+# feat: Adicionar seletor de idiomas
+# fix: Corrigir menu hambúrguer no mobile
+# docs: Atualizar README com instruções
+# style: Ajustar espaçamentos do CSS
