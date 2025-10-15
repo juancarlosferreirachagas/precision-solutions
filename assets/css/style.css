@@ -8,26 +8,26 @@
 /* Variáveis - Design Elegante e Profissional */
 :root {
     /* Cores Principais - Azul e Vermelho Forte */
-    --primary: #1e40af;        /* Azul forte */
+    --primary: #0934c2;        /* Azul forte */
     --primary-dark: #1e3a8a;   /* Azul mais escuro */
-    --primary-light: #3b82f6;  /* Azul claro */
-    --secondary: #dc2626;      /* Vermelho forte */
-    --secondary-dark: #b91c1c; /* Vermelho escuro */
-    --secondary-light: #ef4444; /* Vermelho claro */
+    --primary-light: #03265e;  /* Azul claro */
+    --secondary: #e10000;      /* Vermelho forte */
+    --secondary-dark: #e70c0c; /* Vermelho escuro */
+    --secondary-light: #c10707; /* Vermelho claro */
     --accent: #f59e0b;         /* Laranja para destaque */
     --white: #ffffff;
     
     /* Cores dos Cards - Alternando Azul e Vermelho */
     --card-blue: #1e40af;
-    --card-blue-dark: #1e3a8a;
-    --card-blue-light: #3b82f6;
-    --card-red: #dc2626;
-    --card-red-dark: #b91c1c;
-    --card-red-light: #ef4444;
+    --card-blue-dark: #002a9c;
+    --card-blue-light: #003181;
+    --card-red: #cd0000;
+    --card-red-dark: #b80000;
+    --card-red-light: #e40000;
     
     /* Cores de contraste melhoradas */
     --text-blue: #1e40af;
-    --text-red: #dc2626;
+    --text-red: #eb0000;
     --border-blue: rgba(30, 64, 175, 0.15);
     --border-red: rgba(220, 38, 38, 0.15);
     
@@ -3911,9 +3911,11 @@ footer {
     }
 }
 
-/* Seletor de idiomas simples */
+/* Seletor de idiomas no header */
 .language-switcher {
     position: relative;
+    margin-left: auto;
+    margin-right: 1rem;
 }
 
 .lang-toggle {
@@ -3952,6 +3954,7 @@ footer {
     list-style: none;
     margin: 0;
     padding: 0.5rem 0;
+    margin-top: 0.5rem;
 }
 
 .lang-menu.active {
@@ -3980,14 +3983,17 @@ footer {
 
 /* Mobile - seletor de idiomas */
 @media (max-width: 767px) {
+    .language-switcher {
+        margin-right: 0.5rem;
+    }
+    
+    .lang-toggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
     .lang-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: rgba(30, 64, 175, 0.05);
-        margin: 0.5rem 0;
-        border-radius: 6px;
+        right: 0;
+        min-width: 140px;
     }
 }
