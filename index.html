@@ -389,17 +389,21 @@
                 <div class="contact-form-section">
                     <h3 data-i18n="contact.form.title">Envie sua mensagem e retornaremos o quanto antes.</h3>
                     <form class="contact-form" id="contactForm">
-                        <input type="text" name="nome_contato" data-i18n-attr="placeholder:contact.form.name" placeholder="Nome" required>
-                        <input type="email" name="email_contato" data-i18n-attr="placeholder:contact.form.email" placeholder="Email" required>
-                        <input type="tel" name="tel_contato" data-i18n-attr="placeholder:contact.form.phone" placeholder="Telefone">
-                        <select name="tipo_solicitacao" required>
-                            <option value="" data-i18n="contact.form.requestType">Tipo de Solicitação</option>
-                            <option value="orcamento" data-i18n="contact.form.budget">Solicitar Orçamento</option>
-                            <option value="suporte" data-i18n="contact.form.support">Suporte Técnico</option>
-                            <option value="consultoria" data-i18n="contact.form.consulting">Consultoria</option>
-                            <option value="treinamento" data-i18n="contact.form.training">Treinamento</option>
-                            <option value="outros" data-i18n="contact.form.others">Outros</option>
-                        </select>
+                        <div class="form-row">
+                            <input type="text" name="nome_contato" data-i18n-attr="placeholder:contact.form.name" placeholder="Nome" required>
+                            <input type="email" name="email_contato" data-i18n-attr="placeholder:contact.form.email" placeholder="Email" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="tel_contato" data-i18n-attr="placeholder:contact.form.phone" placeholder="Telefone">
+                            <select name="tipo_solicitacao" required>
+                                <option value="" data-i18n="contact.form.requestType">Tipo de Solicitação</option>
+                                <option value="orcamento" data-i18n="contact.form.budget">Solicitar Orçamento</option>
+                                <option value="suporte" data-i18n="contact.form.support">Suporte Técnico</option>
+                                <option value="consultoria" data-i18n="contact.form.consulting">Consultoria</option>
+                                <option value="treinamento" data-i18n="contact.form.training">Treinamento</option>
+                                <option value="outros" data-i18n="contact.form.others">Outros</option>
+                            </select>
+                        </div>
                         <input type="text" name="produto_interesse" data-i18n-attr="placeholder:contact.form.productInterest" placeholder="Produto de Interesse (opcional)">
                         <input type="text" name="assunto_contato" data-i18n-attr="placeholder:contact.form.subject" placeholder="Assunto" required>
                         <textarea name="mensagem_contato" data-i18n-attr="placeholder:contact.form.message" placeholder="Mensagem" rows="5" required></textarea>
