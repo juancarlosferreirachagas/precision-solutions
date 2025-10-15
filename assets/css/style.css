@@ -642,25 +642,31 @@ nav {
         justify-content: space-between;
         align-items: center;
         height: 60px;
+        position: relative;
     }
     
     .logo {
         flex-shrink: 0;
         height: 35px;
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     .hamburger {
         flex-shrink: 0;
-        margin-left: auto;
         padding: 0.25rem;
         min-width: 35px;
         min-height: 35px;
         background: var(--white);
         box-shadow: var(--shadow);
         border-radius: 4px;
-        position: relative;
-        top: 0;
-        right: 0;
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
     }
 }
 
@@ -3914,11 +3920,12 @@ footer {
     }
     
     .nav-menu a {
-        padding: var(--space-md) var(--space-lg) !important;
+        padding: 0.75rem 1rem !important;
         font-size: var(--text-base) !important;
         border-bottom: 1px solid var(--border-light) !important;
         text-align: center !important;
         display: block !important;
+        margin: 0 !important;
     }
     
     .nav-menu a:last-child {
@@ -4010,5 +4017,101 @@ footer {
     .lang-menu {
         right: 0;
         min-width: 140px;
+    }
+}
+
+/* Diferenciais Section */
+.differentials {
+    padding: var(--space-4xl) 0;
+    background: var(--bg-light);
+}
+
+.differentials h2 {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    color: var(--text);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+}
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.differential {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.differential:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.differential-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-lg);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.differential h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-md);
+    color: var(--text);
+}
+
+.differential p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: var(--text-sm);
+}
+
+/* Mobile - Diferenciais */
+@media (max-width: 767px) {
+    .differentials {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .differentials h2 {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .differentials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .differential {
+        padding: var(--space-lg);
+    }
+    
+    .differential-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .differential h3 {
+        font-size: var(--text-base);
+    }
+    
+    .differential p {
+        font-size: var(--text-xs);
     }
 }

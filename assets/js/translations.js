@@ -51,6 +51,16 @@ const Translations = {
         'about.values.title': 'NOSSOS VALORES',
         'about.values.description': 'Excelência, Inovação, Comprometimento, Transparência e Parceria são os pilares que norteiam nossa atuação no mercado',
         
+        // Diferenciais
+        'differentials.title': 'Diferenciais Precision Solutions',
+        'differentials.professional.title': 'Profissionais Altamente Qualificados',
+        'differentials.professional.description': 'Time especializado com décadas de experiência em telecomunicações e tecnologia da informação.',
+        'differentials.partnership.title': 'Parceria com os Melhores Fornecedores do Mercado',
+        'differentials.partnership.description': 'Trabalhamos com líderes do mercado para oferecer as melhores soluções tecnológicas.',
+        'differentials.consulting.title': 'Consultoria Personalizada',
+        'differentials.consulting.description': 'Soluções sob medida para cada cliente, adaptadas às suas necessidades específicas.',
+        'differentials.expertise.title': 'Know-how e Expertise Precision',
+        'differentials.expertise.description': 'Expertise e Know How único desenvolvido ao longo de anos de experiência no mercado.',
         
         // Serviços
         'services.title': 'NOSSOS SERVIÇOS',
@@ -199,6 +209,16 @@ const Translations = {
         'about.values.title': 'OUR VALUES',
         'about.values.description': 'Excellence, Innovation, Commitment, Transparency and Partnership are the pillars that guide our market performance',
         
+        // Differentials
+        'differentials.title': 'Precision Solutions Differentiators',
+        'differentials.professional.title': 'Highly Qualified Professionals',
+        'differentials.professional.description': 'Specialized team with decades of experience in telecommunications and information technology.',
+        'differentials.partnership.title': 'Partnership with the Best Market Suppliers',
+        'differentials.partnership.description': 'We work with market leaders to offer the best technological solutions.',
+        'differentials.consulting.title': 'Personalized Consulting',
+        'differentials.consulting.description': 'Tailored solutions for each client, adapted to their specific needs.',
+        'differentials.expertise.title': 'Precision Know-how and Expertise',
+        'differentials.expertise.description': 'Unique expertise and know-how developed over years of market experience.',
         
         // Services
         'services.title': 'OUR SERVICES',
@@ -347,6 +367,16 @@ const Translations = {
         'about.values.title': 'NUESTROS VALORES',
         'about.values.description': 'Excelencia, Innovación, Compromiso, Transparencia y Asociación son los pilares que guían nuestro desempeño en el mercado',
         
+        // Diferenciadores
+        'differentials.title': 'Diferenciadores Precision Solutions',
+        'differentials.professional.title': 'Profesionales Altamente Calificados',
+        'differentials.professional.description': 'Equipo especializado con décadas de experiencia en telecomunicaciones y tecnología de la información.',
+        'differentials.partnership.title': 'Asociación con los Mejores Proveedores del Mercado',
+        'differentials.partnership.description': 'Trabajamos con líderes del mercado para ofrecer las mejores soluciones tecnológicas.',
+        'differentials.consulting.title': 'Consultoría Personalizada',
+        'differentials.consulting.description': 'Soluciones a medida para cada cliente, adaptadas a sus necesidades específicas.',
+        'differentials.expertise.title': 'Know-how y Experiencia Precision',
+        'differentials.expertise.description': 'Experiencia y Know How único desarrollado a lo largo de años de experiencia en el mercado.',
         
         // Servicios
         'services.title': 'NUESTROS SERVICIOS',
