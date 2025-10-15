@@ -2873,6 +2873,26 @@ h2::after {
     padding: var(--space-sm);
     display: block;
     margin: 0 auto;
+    border: 1px solid var(--border);
+}
+
+/* Fallback para imagens que não carregam */
+.timeline-logo:not([src]),
+.timeline-logo[src=""] {
+    background: var(--bg-gray);
+    border: 2px dashed var(--border);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-logo:not([src])::after,
+.timeline-logo[src=""]::after {
+    content: "Logo";
+    color: var(--text-light);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
 }
 
 .timeline-logo:hover {
