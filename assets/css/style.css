@@ -613,6 +613,7 @@ footer h4 {
 }
 
 /* Header */
+/* Header - Mobile First */
 header {
     background: var(--bg-white);
     box-shadow: var(--shadow);
@@ -622,13 +623,47 @@ header {
     right: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    height: 70px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: var(--space-sm) var(--space-md);
+    height: 100%;
+    max-width: 100%;
+}
+
+/* Ajustar posicionamento no mobile */
+@media (max-width: 767px) {
+    nav {
+        padding: var(--space-xs) var(--space-sm);
+        justify-content: space-between;
+    }
+    
+    .logo {
+        flex-shrink: 0;
+    }
+    
+    .hamburger {
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    nav {
+        padding: var(--space-md) var(--space-xl);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    nav {
+        padding: 1rem 2rem;
+    }
 }
 
 .logo {
@@ -641,10 +676,25 @@ nav {
     transition: var(--transition);
 }
 
+/* Logo - Mobile First */
 .logo img {
-    height: 50px;
+    height: 40px;
     width: auto;
     transition: var(--transition);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .logo img {
+        height: 45px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .logo img {
+        height: 50px;
+    }
 }
 
 .logo:hover img {
@@ -657,6 +707,17 @@ nav {
     display: none; /* Hidden by default on mobile */
     list-style: none;
     gap: var(--space-lg);
+}
+
+/* Force hamburger to show on mobile */
+@media (max-width: 767px) {
+    .hamburger {
+        display: flex !important;
+    }
+    
+    .nav-menu {
+        display: none !important;
+    }
 }
 
 .nav-menu a {
@@ -797,6 +858,18 @@ nav {
     min-height: var(--touch-target);
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--border);
+}
+
+/* Mobile hamburger adjustments */
+@media (max-width: 767px) {
+    .hamburger {
+        padding: var(--space-xs);
+        min-width: 40px;
+        min-height: 40px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+    }
 }
 
 .hamburger:hover {
@@ -830,7 +903,7 @@ nav {
     background-size: cover;
     background-position: center;
     color: var(--white);
-    padding: var(--space-4xl) 0 var(--space-3xl);
+    padding: calc(70px + var(--space-3xl)) 0 var(--space-3xl);
     text-align: center;
     position: relative;
     overflow: hidden;
