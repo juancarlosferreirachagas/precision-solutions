@@ -7,13 +7,41 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            
+            // Prevenir scroll do body quando menu está aberto
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
 
         // Fechar menu ao clicar em link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
             });
+        });
+
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Fechar menu com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
 });
