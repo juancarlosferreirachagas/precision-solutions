@@ -1,5 +1,7 @@
 // Menu hambúrguer simples
 document.addEventListener('DOMContentLoaded', function() {
+    // Ir para o topo da página ao carregar
+    window.scrollTo(0, 0);
     if (window.logger) window.logger.log('📱 Script principal carregado');
     
     const hamburger = document.querySelector('.hamburger');

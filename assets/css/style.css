@@ -638,17 +638,29 @@ nav {
 /* Ajustar posicionamento no mobile */
 @media (max-width: 767px) {
     nav {
-        padding: var(--space-xs) var(--space-sm);
+        padding: 0.25rem 0.5rem;
         justify-content: space-between;
+        align-items: center;
+        height: 60px;
     }
     
     .logo {
         flex-shrink: 0;
+        height: 35px;
     }
     
     .hamburger {
         flex-shrink: 0;
         margin-left: auto;
+        padding: 0.25rem;
+        min-width: 35px;
+        min-height: 35px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        border-radius: 4px;
+        position: relative;
+        top: 0;
+        right: 0;
     }
 }
 
@@ -864,11 +876,14 @@ nav {
 /* Mobile hamburger adjustments */
 @media (max-width: 767px) {
     .hamburger {
-        padding: var(--space-xs);
-        min-width: 40px;
-        min-height: 40px;
+        padding: 0.25rem;
+        min-width: 35px;
+        min-height: 35px;
         background: var(--white);
         box-shadow: var(--shadow);
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: 0.25rem;
     }
 }
 
