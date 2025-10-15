@@ -76,23 +76,22 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" data-i18n="navigation.home">HOME</a></li>
-                <li><a href="#about" data-i18n="navigation.about">QUEM SOMOS</a></li>
+                <li><a href="#home" data-section="home" data-i18n="navigation.home">HOME</a></li>
+                <li><a href="#about" data-section="about" data-i18n="navigation.about">QUEM SOMOS</a></li>
                 <li class="dropdown">
-                    <a href="#services" data-i18n="navigation.services">SERVIÇOS</a>
+                    <a href="#services" data-section="services" data-i18n="navigation.services">SERVIÇOS</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/consultoria.html" data-i18n="navigation.consulting">Consultoria</a></li>
-                        <li><a href="pages/integracao.html" data-i18n="navigation.integration">Integração</a></li>
-                        <li><a href="pages/operacao.html" data-i18n="navigation.operation">Operação</a></li>
-                        <li><a href="pages/certificacao.html" data-i18n="navigation.certification">Certificação</a></li>
-                        <li><a href="pages/treinamento.html" data-i18n="navigation.training">Treinamento</a></li>
+                        <li><a href="#consultoria" data-section="consultoria" data-i18n="navigation.consulting">Consultoria</a></li>
+                        <li><a href="#integracao" data-section="integracao" data-i18n="navigation.integration">Integração</a></li>
+                        <li><a href="#operacao" data-section="operacao" data-i18n="navigation.operation">Operação</a></li>
+                        <li><a href="#certificacao" data-section="certificacao" data-i18n="navigation.certification">Certificação</a></li>
+                        <li><a href="#treinamento" data-section="treinamento" data-i18n="navigation.training">Treinamento</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#solutions" data-i18n="navigation.solutions">SOLUÇÕES</a>
+                    <a href="#solutions" data-section="solutions" data-i18n="navigation.solutions">SOLUÇÕES</a>
                 </li>
-                <li><a href="pages/eventos.html" data-i18n="navigation.events">EVENTOS</a></li>
-                <li><a href="#contact" data-i18n="navigation.contact">CONTATO</a></li>
+                <li><a href="#contact" data-section="contact" data-i18n="navigation.contact">CONTATO</a></li>
                 <li class="language-switcher">
                     <a href="#" class="lang-toggle">PT</a>
                     <ul class="lang-menu">
@@ -451,6 +450,234 @@
         </div>
     </section>
 
+    <!-- Consultoria Section -->
+    <section id="consultoria" class="service-section" style="display: none;">
+        <div class="container">
+            <div class="service-header">
+                <h1>Consultoria em Redes</h1>
+                <p>Possuímos um portfólio extenso de serviços de consultoria para atender a necessidade de nosso clientes. Entre os serviços realizamos:</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Desenho de Redes Backbone e FTTX</h3>
+                    <p>Especialistas em arquitetura de redes backbone e implementação de soluções FTTX para máxima performance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Testes de Desempenho</h3>
+                    <p>Testes de desempenho em redes de transporte e L2/L3 até 400Gbps para garantir qualidade e confiabilidade.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                            <path d="M20.2 4.2l-4.2 4.2m-6 6l-4.2 4.2"/>
+                            <path d="M3.8 4.2l4.2 4.2m6 6l4.2 4.2"/>
+                        </svg>
+                    </div>
+                    <h3>Monitoração de Redes</h3>
+                    <p>Monitoração de redes até camada 7 para garantir visibilidade completa e detecção proativa de problemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integração Section -->
+    <section id="integracao" class="service-section" style="display: none;">
+        <div class="container">
+            <div class="service-header">
+                <h1>Integração de Sistemas</h1>
+                <p>Oferecemos serviços especializados de integração para conectar e otimizar seus sistemas de telecomunicações.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Integração de Equipamentos</h3>
+                    <p>Integração completa de equipamentos de telecomunicações com sistemas existentes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3>Configuração de Redes</h3>
+                    <p>Configuração e otimização de redes para máxima performance e confiabilidade.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Migração de Sistemas</h3>
+                    <p>Migração segura e eficiente de sistemas legados para novas tecnologias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operação Section -->
+    <section id="operacao" class="service-section" style="display: none;">
+        <div class="container">
+            <div class="service-header">
+                <h1>Operação e Manutenção</h1>
+                <p>Serviços especializados de operação e manutenção para garantir a continuidade dos seus serviços.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3>Monitoramento 24/7</h3>
+                    <p>Monitoramento contínuo de suas redes e sistemas com suporte 24 horas por dia.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Programas de manutenção preventiva para evitar falhas e garantir máxima disponibilidade.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Suporte técnico especializado para resolução rápida de problemas e otimização de performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificação Section -->
+    <section id="certificacao" class="service-section" style="display: none;">
+        <div class="container">
+            <div class="service-header">
+                <h1>Certificação ANATEL</h1>
+                <p>Serviços especializados de certificação ANATEL para equipamentos de telecomunicações.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                            <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+                            <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+                        </svg>
+                    </div>
+                    <h3>Certificação de Produtos</h3>
+                    <p>Processo completo de certificação ANATEL para novos produtos de telecomunicações.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Renovação de Certificados</h3>
+                    <p>Renovação e atualização de certificados ANATEL existentes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3>Consultoria Regulatória</h3>
+                    <p>Consultoria especializada em regulamentações ANATEL e compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treinamento Section -->
+    <section id="treinamento" class="service-section" style="display: none;">
+        <div class="container">
+            <div class="service-header">
+                <h1>Treinamento Técnico</h1>
+                <p>Programas de treinamento especializados para capacitar sua equipe em tecnologias de telecomunicações.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h3>Treinamento em Equipamentos</h3>
+                    <p>Treinamento prático em operação e manutenção de equipamentos de telecomunicações.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3>Certificação Técnica</h3>
+                    <p>Programas de certificação técnica para profissionais da área.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Workshops Especializados</h3>
+                    <p>Workshops práticos sobre tecnologias emergentes e melhores práticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -491,6 +718,7 @@
 
     <script src="assets/js/logger.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/spa.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/form-validation.js"></script>
     
