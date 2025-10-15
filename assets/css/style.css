@@ -1273,20 +1273,22 @@ h2::after {
 }
 
 /* Trajectory Section - Clean Timeline */
+/* Trajectory - Mobile First */
 .trajectory {
-    margin: 3rem 0;
+    margin: var(--space-2xl) 0;
 }
 
 .trajectory h3 {
     color: var(--primary);
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-xl);
     text-align: center;
-    font-size: 1.8rem;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
 }
 
 .timeline {
     position: relative;
-    padding-left: 2rem;
+    padding-left: var(--space-xl);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1294,7 +1296,7 @@ h2::after {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 1rem;
+    left: var(--space-md);
     top: 0;
     bottom: 0;
     width: 3px;
@@ -1304,8 +1306,8 @@ h2::after {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
-    padding-left: 2rem;
+    margin-bottom: var(--space-2xl);
+    padding-left: var(--space-xl);
 }
 
 .timeline-item::before {
@@ -1322,23 +1324,99 @@ h2::after {
 }
 
 .year {
-    font-weight: bold;
+    font-weight: var(--font-bold);
     color: var(--primary);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
     display: block;
 }
 
 .timeline-item h4 {
     color: var(--text);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
 }
 
 .timeline-item p {
     color: var(--text-light);
     line-height: 1.6;
     margin: 0;
+    font-size: var(--text-sm);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .trajectory {
+        margin: var(--space-3xl) 0;
+    }
+    
+    .trajectory h3 {
+        font-size: var(--text-3xl);
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .timeline {
+        padding-left: var(--space-2xl);
+    }
+    
+    .timeline::before {
+        left: var(--space-lg);
+    }
+    
+    .timeline-item {
+        margin-bottom: var(--space-3xl);
+        padding-left: var(--space-2xl);
+    }
+    
+    .year {
+        font-size: var(--text-2xl);
+    }
+    
+    .timeline-item h4 {
+        font-size: var(--text-xl);
+    }
+    
+    .timeline-item p {
+        font-size: var(--text-base);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .trajectory {
+        margin: 3rem 0;
+    }
+    
+    .trajectory h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline::before {
+        left: 1rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 2.5rem;
+        padding-left: 2rem;
+    }
+    
+    .year {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-item h4 {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item p {
+        font-size: 1rem;
+    }
 }
 
 /* Mission Vision Section - Standard Design */
@@ -2774,6 +2852,46 @@ h2::after {
 .nav-menu a.active {
     color: var(--primary);
     background: rgba(37, 99, 235, 0.1);
+}
+
+/* Timeline Logos - Mobile First */
+.event-logo {
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+.timeline-logo {
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    background: var(--white);
+    padding: var(--space-sm);
+}
+
+.timeline-logo:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .timeline-logo {
+        max-width: 150px;
+        max-height: 75px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .timeline-logo {
+        max-width: 180px;
+        max-height: 90px;
+    }
 }
 
 /* Touch Targets - Mobile First */
