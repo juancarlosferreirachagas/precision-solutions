@@ -2339,6 +2339,9 @@ footer {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
     
     h3 {
@@ -2435,6 +2438,7 @@ footer {
     /* Language Switcher Mobile */
     .language-switcher {
         position: relative;
+        order: -1; /* Move para o início do menu */
     }
     
     .lang-menu {
@@ -2447,6 +2451,8 @@ footer {
         margin: 0.1rem 0 0 1rem;
         border-radius: 6px;
         border-left: 2px solid var(--card-blue);
+        min-width: auto;
+        width: auto;
     }
     
     .lang-menu a {
@@ -2581,6 +2587,10 @@ footer {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.3;
     }
     
     h3 {

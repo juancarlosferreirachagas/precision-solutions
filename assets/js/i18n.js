@@ -179,15 +179,15 @@ class I18n {
                     "title": "NOSSAS TECNOLOGIAS EM AÇÃO",
                     "subtitle": "Veja nossa expertise em fibra óptica e redes de telecomunicações",
                     "fiber": {
-                        "title": "Fibra Óptica",
+                        "title": "Fibra Óptica - Tecnologia Avançada",
                         "description": "Tecnologia de ponta para redes de alta velocidade"
                     },
                     "networks": {
-                        "title": "Redes Ópticas",
+                        "title": "Redes de Fibra óptica",
                         "description": "Infraestrutura robusta para conectividade"
                     },
                     "smartcity": {
-                        "title": "Cidades Inteligentes",
+                        "title": "Cidade Inteligente",
                         "description": "Conectividade para o futuro urbano"
                     }
                 },
@@ -229,7 +229,7 @@ class I18n {
                     }
                 },
                 "footer": {
-                    "description": "Excelência em soluções tecnológicas para telecomunicações, eletrônica, energia e tecnologia da informação.",
+                    "description": "Precision Solutions - Excelência em Soluções Tecnológicas",
                     "contact": {
                         "title": "Contato"
                     },
@@ -305,6 +305,25 @@ class I18n {
                 "about": {
                     "title": "ABOUT PRECISION SOLUTIONS",
                     "description": "Precision Solutions is a company specialized in providing technological solutions that enable visibility, testing, monitoring and optimization of networks in the telecommunications, electronics, energy and information technology segments. Based on decades of experience, our team of professionals is always available to understand our clients' needs and consultatively define the best strategy to meet the demands of testing & measurement, multiservice network implementation and equipment certification.",
+                    "trajectory": {
+                        "title": "TRAJECTORY",
+                        "foundation": {
+                            "title": "Precision Foundation",
+                            "description": "Precision Solutions is born with focus on providing telecommunications services and products with unlimited excellence"
+                        },
+                        "accreditation": {
+                            "title": "Accreditation",
+                            "description": "Precision Solutions achieves ISO17025 quality accreditation"
+                        },
+                        "worldcup": {
+                            "title": "World Cup",
+                            "description": "Precision Solutions is responsible for implementing the communication network for 50% of the World Cup stadiums"
+                        },
+                        "olympics": {
+                            "title": "Olympics",
+                            "description": "Precision Solutions implements Rio de Janeiro's optical network and participates in the operation of the global communication network that supports the 2016 Olympics"
+                        }
+                    },
                     "mission": {
                         "title": "OUR MISSION",
                         "description": "To provide services and products in the information technology and telecommunications sector to support our clients in their challenges and objectives"
@@ -370,6 +389,22 @@ class I18n {
                     "consulting": {
                         "title": "Specialized Consulting",
                         "description": "Specialized technical consulting in telecommunications, networks and high-performance infrastructure."
+                    }
+                },
+                "gallery": {
+                    "title": "OUR TECHNOLOGIES IN ACTION",
+                    "subtitle": "See our expertise in fiber optics and telecommunications networks",
+                    "fiber": {
+                        "title": "Fiber Optics - Advanced Technology",
+                        "description": "Cutting-edge technology for high-speed networks"
+                    },
+                    "networks": {
+                        "title": "Fiber Optic Networks",
+                        "description": "Robust infrastructure for connectivity"
+                    },
+                    "smartcity": {
+                        "title": "Smart City",
+                        "description": "Connectivity for the urban future"
                     }
                 },
                 "contact": {
@@ -461,6 +496,25 @@ class I18n {
                 "about": {
                     "title": "SOBRE PRECISION SOLUTIONS",
                     "description": "Precision Solutions es una empresa especializada en proporcionar soluciones tecnológicas que permiten visibilidad, pruebas, monitoreo y optimización de redes en los segmentos de telecomunicaciones, electrónica, energía y tecnología de la información. Basados en décadas de experiencia, nuestro equipo de profesionales está siempre disponible para entender las necesidades de nuestros clientes y de forma consultiva definir la mejor estrategia para atender las demandas de pruebas y medición, implementación de redes multiservicio y certificación de equipos.",
+                    "trajectory": {
+                        "title": "TRAYECTORIA",
+                        "foundation": {
+                            "title": "Fundación Precision",
+                            "description": "Nace Precision Solutions con enfoque en proporcionar servicios y productos en telecomunicaciones con excelencia ilimitada"
+                        },
+                        "accreditation": {
+                            "title": "Acreditación",
+                            "description": "Precision Solutions conquista acreditación de calidad ISO17025"
+                        },
+                        "worldcup": {
+                            "title": "Copa del Mundo",
+                            "description": "Precision Solutions es responsable de la implementación de la red de comunicación del 50% de los estadios de la Copa del Mundo"
+                        },
+                        "olympics": {
+                            "title": "Olimpíadas",
+                            "description": "Precision Solutions implementa la red óptica de Río de Janeiro y participa en la operación de la red mundial de comunicación que soporta las Olimpíadas de 2016"
+                        }
+                    },
                     "mission": {
                         "title": "NUESTRA MISIÓN",
                         "description": "Proporcionar servicios y productos en el sector de tecnología de la información y telecomunicaciones para apoyar a nuestros clientes en sus desafíos y objetivos"
@@ -528,6 +582,22 @@ class I18n {
                         "description": "Consultoría técnica especializada en telecomunicaciones, redes e infraestructura de alto rendimiento."
                     }
                 },
+                "gallery": {
+                    "title": "NUESTRAS TECNOLOGÍAS EN ACCIÓN",
+                    "subtitle": "Vea nuestra experiencia en fibra óptica y redes de telecomunicaciones",
+                    "fiber": {
+                        "title": "Fibra Óptica - Tecnología Avanzada",
+                        "description": "Tecnología de vanguardia para redes de alta velocidad"
+                    },
+                    "networks": {
+                        "title": "Redes de Fibra Óptica",
+                        "description": "Infraestructura robusta para conectividad"
+                    },
+                    "smartcity": {
+                        "title": "Ciudad Inteligente",
+                        "description": "Conectividad para el futuro urbano"
+                    }
+                },
                 "contact": {
                     "title": "PONTE EN CONTACTO",
                     "subtitle": "ESTAMOS LISTOS PARA ATENDER SUS NECESIDADES. CONTÁCTENOS.",
@@ -568,7 +638,7 @@ class I18n {
         };
 
         this.translations = translations[this.currentLanguage] || translations.pt;
-        console.log(`✅ Traduções carregadas para: ${this.currentLanguage}`);
+        if (window.logger) window.logger.log(`✅ Traduções carregadas para: ${this.currentLanguage}`);
     }
 
     // Aplicar traduções ao DOM
@@ -640,7 +710,7 @@ class I18n {
             if (translation && translation[k]) {
                 translation = translation[k];
             } else {
-                console.warn(`Tradução não encontrada para: ${key}`);
+                if (window.logger) window.logger.warn(`Tradução não encontrada para: ${key}`);
                 return key; // Retorna a chave se não encontrar tradução
             }
         }
@@ -652,13 +722,13 @@ class I18n {
     changeLanguage(lang) {
         if (lang === this.currentLanguage) return;
         
-        console.log(`🔄 Mudando idioma para: ${lang}`);
+        if (window.logger) window.logger.log(`🔄 Mudando idioma para: ${lang}`);
         this.currentLanguage = lang;
         this.setStoredLanguage(lang);
         
         this.loadTranslations();
         this.applyTranslations();
-        console.log(`✅ Idioma alterado para: ${lang}`);
+        if (window.logger) window.logger.log(`✅ Idioma alterado para: ${lang}`);
         
         // Disparar evento personalizado
         document.dispatchEvent(new CustomEvent('languageChanged', {
@@ -696,7 +766,7 @@ class I18n {
 
 // Inicializar sistema de internacionalização quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Inicializando sistema de tradução...');
+    if (window.logger) window.logger.log('🚀 Inicializando sistema de tradução...');
     window.i18n = new I18n();
-    console.log('✅ Sistema de tradução inicializado!');
+    if (window.logger) window.logger.log('✅ Sistema de tradução inicializado!');
 });
