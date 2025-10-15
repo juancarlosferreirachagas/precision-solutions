@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
-});
 
     // Funcionalidade dos produtos
     // Botões de orçamento
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
     // Animação de scroll
     const observerOptions = {
