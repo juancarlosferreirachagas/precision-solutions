@@ -1,12 +1,14 @@
 // Menu hambúrguer simples
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📱 Script principal carregado');
+    if (window.logger) window.logger.log('📱 Script principal carregado');
     
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
-    console.log('Hamburger found:', !!hamburger);
-    console.log('Nav menu found:', !!navMenu);
+    if (window.logger) {
+        window.logger.log('Hamburger found:', !!hamburger);
+        window.logger.log('Nav menu found:', !!navMenu);
+    }
     
     if (hamburger && navMenu) {
         hamburger.onclick = function() {

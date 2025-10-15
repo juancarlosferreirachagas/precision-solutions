@@ -61,6 +61,18 @@ class I18n {
                         "title": "Profissionais Altamente Qualificados",
                         "description": "Time especializado com décadas de experiência em telecomunicações e tecnologia da informação."
                     },
+                    "partnership": {
+                        "title": "Parceria com os Melhores Fornecedores do Mercado",
+                        "description": "Trabalhamos com líderes do mercado para oferecer as melhores soluções tecnológicas."
+                    },
+                    "consulting": {
+                        "title": "Consultoria Personalizada",
+                        "description": "Soluções sob medida para cada cliente, adaptadas às suas necessidades específicas."
+                    },
+                    "expertise": {
+                        "title": "Know-how e Expertise Precision",
+                        "description": "Expertise e Know How único desenvolvido ao longo de anos de experiência no mercado."
+                    },
                     "technology": {
                         "title": "Tecnologia de Ponta",
                         "description": "Utilizamos as mais modernas ferramentas e equipamentos para garantir a excelência em nossos serviços."
@@ -77,6 +89,25 @@ class I18n {
                 "about": {
                     "title": "SOBRE A PRECISION SOLUTIONS",
                     "description": "A Precision Solutions é uma empresa especializada em prover soluções tecnológicas que permitem visibilidade, teste, monitoração e otimização de redes no segmento de telecomunicações, eletrônica, energia e tecnologia da informação. Com base em décadas de experiência, nosso time de profissionais está sempre disponível para entender a necessidade de nossos clientes e de forma consultiva definir a melhor estratégia para atender as demandas de teste & medição, implantação de redes multisserviços e certificação de equipamentos.",
+                    "trajectory": {
+                        "title": "TRAJETÓRIA",
+                        "foundation": {
+                            "title": "Fundação Precision",
+                            "description": "Nasce a Precision Solutions com foco em prover serviços e produtos em telecomunicações com excelência ilimitada"
+                        },
+                        "accreditation": {
+                            "title": "Acreditação",
+                            "description": "Precision Solutions conquista acreditação de qualidade ISO17025"
+                        },
+                        "worldcup": {
+                            "title": "Copa do Mundo",
+                            "description": "Precision Solutions é responsável pela implantação da rede de comunicação de 50% dos estádios da Copa do Mundo"
+                        },
+                        "olympics": {
+                            "title": "Olimpíadas",
+                            "description": "Precision Solutions implementa a rede óptica do Rio de Janeiro e participa da operação da malha mundial de comunicação que suporta as Olimpíadas de 2016"
+                        }
+                    },
                     "mission": {
                         "title": "NOSSA MISSÃO",
                         "description": "Prover serviços e produtos no setor de tecnologia da informação e telecomunicações para suportar nossos clientes em seus desafios e objetivos"
@@ -144,6 +175,22 @@ class I18n {
                         "description": "Consultoria técnica especializada em telecomunicações, redes e infraestrutura de alta performance."
                     }
                 },
+                "gallery": {
+                    "title": "NOSSAS TECNOLOGIAS EM AÇÃO",
+                    "subtitle": "Veja nossa expertise em fibra óptica e redes de telecomunicações",
+                    "fiber": {
+                        "title": "Fibra Óptica",
+                        "description": "Tecnologia de ponta para redes de alta velocidade"
+                    },
+                    "networks": {
+                        "title": "Redes Ópticas",
+                        "description": "Infraestrutura robusta para conectividade"
+                    },
+                    "smartcity": {
+                        "title": "Cidades Inteligentes",
+                        "description": "Conectividade para o futuro urbano"
+                    }
+                },
                 "contact": {
                     "title": "CONTATO",
                     "subtitle": "ENTRE EM CONTATO AGORA MESMO E ENCONTRAREMOS A MELHOR SOLUÇÃO PARA A SUA EMPRESA.",
@@ -164,6 +211,13 @@ class I18n {
                         "productInterest": "Produto de Interesse (opcional)",
                         "subject": "Assunto"
                     },
+                    "location": {
+                        "title": "Nossa Localização",
+                        "company": "Precision Solutions",
+                        "address": "Av. Nova Independência, 87 cj32<br>Cidade Monções, São Paulo - SP",
+                        "googleMaps": "Google Maps",
+                        "waze": "Waze"
+                    },
                     "info": {
                         "address": "ENDEREÇO",
                         "addressValue": "Av. Nova Independência, 87 cj32<br>Cidade Monções, São Paulo - SP",
@@ -175,7 +229,13 @@ class I18n {
                     }
                 },
                 "footer": {
-                    "description": "Precision Solutions - Excelência em Soluções Tecnológicas",
+                    "description": "Excelência em soluções tecnológicas para telecomunicações, eletrônica, energia e tecnologia da informação.",
+                    "contact": {
+                        "title": "Contato"
+                    },
+                    "address": {
+                        "title": "Endereço"
+                    },
                     "rights": "PRECISION SOLUTIONS © Todos os direitos reservados. Implementação de conteúdo e material fornecidos pelo administrador.",
                     "privacy": "Política de Privacidade",
                     "terms": "Termos de Uso"
@@ -216,6 +276,18 @@ class I18n {
                     "professional": {
                         "title": "Highly Qualified Professionals",
                         "description": "Specialized team with decades of experience in telecommunications and information technology."
+                    },
+                    "partnership": {
+                        "title": "Partnership with the Best Market Suppliers",
+                        "description": "We work with market leaders to offer the best technological solutions."
+                    },
+                    "consulting": {
+                        "title": "Personalized Consulting",
+                        "description": "Tailored solutions for each client, adapted to their specific needs."
+                    },
+                    "expertise": {
+                        "title": "Precision Know-how and Expertise",
+                        "description": "Unique expertise and know-how developed over years of market experience."
                     },
                     "technology": {
                         "title": "Cutting-Edge Technology",
@@ -524,7 +596,7 @@ class I18n {
             const key = element.getAttribute('data-i18n-html');
             const translation = this.getTranslation(key);
             if (translation) {
-                element.innerHTML = translation;
+                element.textContent = translation;
             }
         });
 
