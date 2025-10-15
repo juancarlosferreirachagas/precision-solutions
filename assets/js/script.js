@@ -11,9 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (hamburger && navMenu) {
-        hamburger.onclick = function() {
-            console.log('Hamburger clicked');
+        hamburger.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked - toggling menu');
+            console.log('Nav menu classes before:', navMenu.className);
             navMenu.classList.toggle('active');
+            console.log('Nav menu classes after:', navMenu.className);
         };
         
         // Fechar menu ao clicar em qualquer link
