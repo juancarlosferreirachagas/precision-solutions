@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Salvar preferência
                     localStorage.setItem('precision-language', selectedLang);
+                    
+                    // Aplicar traduções
+                    applyTranslations(selectedLang);
                 });
             });
             
@@ -101,4 +104,69 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+    
+    // Aplicar idioma salvo ao carregar a página
+    const savedLanguage = localStorage.getItem('precision-language') || 'pt';
+    applyTranslations(savedLanguage);
+    
+    // Atualizar seletor com idioma salvo
+    updateLanguageSelector(savedLanguage);
 });
+
+// Função para aplicar traduções
+function applyTranslations(language) {
+    if (!window.Translations || !window.Translations[language]) {
+        console.warn('Traduções não encontradas para:', language);
+        return;
+    }
+    
+    const translations = window.Translations[language];
+    
+    // Aplicar traduções em elementos com data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(function(element) {
+        const key = element.getAttribute('data-i18n');
+        const translation = translations[key];
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Aplicar traduções em elementos com data-i18n-html
+    document.querySelectorAll('[data-i18n-html]').forEach(function(element) {
+        const key = element.getAttribute('data-i18n-html');
+        const translation = translations[key];
+        if (translation) {
+            element.innerHTML = translation;
+        }
+    });
+    
+    // Aplicar traduções em atributos com data-i18n-attr
+    document.querySelectorAll('[data-i18n-attr]').forEach(function(element) {
+        const attrData = element.getAttribute('data-i18n-attr');
+        const [attribute, key] = attrData.split(':');
+        const translation = translations[key];
+        if (translation && attribute) {
+            element.setAttribute(attribute, translation);
+        }
+    });
+    
+    // Atualizar atributo lang do documento
+    document.documentElement.setAttribute('lang', language);
+    
+    console.log('Traduções aplicadas para:', language);
+}
+
+// Função para atualizar o seletor de idiomas
+function updateLanguageSelector(language) {
+    const langToggle = document.querySelector('.lang-toggle');
+    if (!langToggle) return;
+    
+    const languageMap = {
+        'pt': { flag: '🇧🇷', code: 'PT' },
+        'en': { flag: '🇺🇸', code: 'EN' },
+        'es': { flag: '🇪🇸', code: 'ES' }
+    };
+    
+    const lang = languageMap[language] || languageMap['pt'];
+    langToggle.innerHTML = `<span class="lang-flag">${lang.flag}</span><span class="lang-code">${lang.code}</span>`;
+}
