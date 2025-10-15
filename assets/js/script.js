@@ -59,6 +59,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Language Switcher - Agora gerenciado pelo LanguageSystem
-    // O sistema de idiomas é inicializado automaticamente via language-init.js
+    // Language Switcher - Simples e funcional
+    const langSwitcher = document.querySelector('.language-switcher');
+    if (langSwitcher) {
+        const langToggle = langSwitcher.querySelector('.lang-toggle');
+        const langMenu = langSwitcher.querySelector('.lang-menu');
+        
+        if (langToggle && langMenu) {
+            // Toggle do menu
+            langToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                langMenu.classList.toggle('active');
+            });
+            
+            // Seleção de idioma
+            langMenu.querySelectorAll('.lang-option').forEach(function(option) {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    console.log('Idioma selecionado:', selectedLang);
+                    
+                    // Atualizar botão toggle
+                    const flag = this.textContent.split(' ')[0];
+                    const name = this.textContent.split(' ').slice(1).join(' ');
+                    langToggle.innerHTML = `<span class="lang-flag">${flag}</span><span class="lang-code">${selectedLang.toUpperCase()}</span>`;
+                    
+                    // Fechar menu
+                    langMenu.classList.remove('active');
+                    
+                    // Salvar preferência
+                    localStorage.setItem('precision-language', selectedLang);
+                });
+            });
+            
+            // Fechar menu ao clicar fora
+            document.addEventListener('click', function(e) {
+                if (!langSwitcher.contains(e.target)) {
+                    langMenu.classList.remove('active');
+                }
+            });
+        }
+    }
 });
