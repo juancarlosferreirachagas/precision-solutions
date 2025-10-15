@@ -59,37 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Language Switcher
-    const langSwitcher = document.querySelector('.language-switcher');
-    if (langSwitcher) {
-        const langToggle = langSwitcher.querySelector('.lang-toggle');
-        const langMenu = langSwitcher.querySelector('.lang-menu');
-        
-        if (langToggle && langMenu) {
-            langToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Language toggle clicked');
-                langMenu.classList.toggle('active');
-            });
-            
-            langMenu.querySelectorAll('a').forEach(function(langLink) {
-                langLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const selectedLang = langLink.getAttribute('data-lang');
-                    console.log('Language selected:', selectedLang);
-                    
-                    // Usar sistema de internacionalização
-                    if (window.i18n) {
-                        console.log('🌍 Mudando idioma via i18n...');
-                        window.i18n.changeLanguage(selectedLang);
-                    } else {
-                        console.error('❌ Sistema i18n não encontrado!');
-                    }
-                    
-                    langMenu.classList.remove('active');
-                });
-            });
-        }
-    }
+    // Language Switcher - Agora gerenciado pelo LanguageSystem
+    // O sistema de idiomas é inicializado automaticamente via language-init.js
 });

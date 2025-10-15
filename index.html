@@ -92,14 +92,7 @@
                     <a href="#solutions" data-section="solutions" data-i18n="navigation.solutions">SOLUÇÕES</a>
                 </li>
                 <li><a href="#contact" data-section="contact" data-i18n="navigation.contact">CONTATO</a></li>
-                <li class="language-switcher">
-                    <a href="#" class="lang-toggle">PT</a>
-                    <ul class="lang-menu">
-                        <li><a href="#" data-lang="pt">Português</a></li>
-                        <li><a href="#" data-lang="en">English</a></li>
-                        <li><a href="#" data-lang="es">Español</a></li>
-                    </ul>
-                </li>
+                <!-- Language Selector será inserido aqui automaticamente pelo JavaScript -->
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -727,7 +720,14 @@
     </a>
 
     <script src="assets/js/logger.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <!-- Sistema de Idiomas - Módulos -->
+    <script src="assets/js/modules/Translations.js"></script>
+    <script src="assets/js/modules/LanguageManager.js"></script>
+    <script src="assets/js/modules/LanguageSelector.js"></script>
+    <script src="assets/js/modules/LanguageSystem.js"></script>
+    <script src="assets/js/language-init.js"></script>
+    
+    <!-- Scripts principais -->
     <script src="assets/js/spa.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/form-validation.js"></script>
