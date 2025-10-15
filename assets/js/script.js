@@ -12,25 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (hamburger && navMenu) {
         hamburger.onclick = function() {
-            console.log('Hamburger clicked');
+            if (window.logger) window.logger.log('Hamburger clicked');
             navMenu.classList.toggle('active');
         };
         
         // Fechar menu ao clicar em qualquer link
         const links = navMenu.querySelectorAll('a');
-        console.log('Found links:', links.length);
+        if (window.logger) window.logger.log('Found links:', links.length);
         
         links.forEach(function(link, index) {
-            console.log('Setting up link', index + 1, ':', link.textContent);
+            if (window.logger) window.logger.log('Setting up link', index + 1, ':', link.textContent);
             link.onclick = function() {
-                console.log('Link clicked:', link.textContent);
+                if (window.logger) window.logger.log('Link clicked:', link.textContent);
                 navMenu.classList.remove('active');
             };
         });
         
         // Dropdown simples
         const dropdowns = document.querySelectorAll('.dropdown');
-        console.log('Found dropdowns:', dropdowns.length);
+        if (window.logger) window.logger.log('Found dropdowns:', dropdowns.length);
         
         dropdowns.forEach(function(dropdown) {
             const toggle = dropdown.querySelector('a');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (toggle && menu) {
                 toggle.onclick = function(e) {
                     e.preventDefault();
-                    console.log('Dropdown clicked:', toggle.textContent);
+                    if (window.logger) window.logger.log('Dropdown clicked:', toggle.textContent);
                     menu.classList.toggle('active');
                 };
                 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dropdownLinks = menu.querySelectorAll('a');
                 dropdownLinks.forEach(function(dropdownLink) {
                     dropdownLink.onclick = function() {
-                        console.log('Dropdown link clicked:', dropdownLink.textContent);
+                        if (window.logger) window.logger.log('Dropdown link clicked:', dropdownLink.textContent);
                         navMenu.classList.remove('active');
                     };
                 });
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             langToggle.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Language toggle clicked');
+                if (window.logger) window.logger.log('Language toggle clicked');
                 langMenu.classList.toggle('active');
             });
             
@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 langLink.addEventListener('click', function(e) {
                     e.preventDefault();
                     const selectedLang = langLink.getAttribute('data-lang');
-                    console.log('Language selected:', selectedLang);
+                    if (window.logger) window.logger.log('Language selected:', selectedLang);
                     
                     // Usar sistema de internacionalização
                     if (window.i18n) {
-                        console.log('🌍 Mudando idioma via i18n...');
+                        if (window.logger) window.logger.log('🌍 Mudando idioma via i18n...');
                         window.i18n.changeLanguage(selectedLang);
                     } else {
-                        console.error('❌ Sistema i18n não encontrado!');
+                        if (window.logger) window.logger.error('❌ Sistema i18n não encontrado!');
                     }
                     
                     langMenu.classList.remove('active');

@@ -16,7 +16,7 @@ const STATIC_ASSETS = [
     '/assets/js/form-validation.js',
     '/assets/images/icons/logo-precision.png',
     '/assets/images/icons/favicon.svg',
-    '/manifest.json'
+    '/public/manifest.json'
 ];
 
 // Recursos para cache dinâmico
@@ -28,42 +28,34 @@ const DYNAMIC_PATTERNS = [
 
 // Instalação do Service Worker
 self.addEventListener('install', (event) => {
-    console.log('[SW] Installing...');
-    
     event.waitUntil(
         caches.open(STATIC_CACHE)
             .then((cache) => {
-                console.log('[SW] Caching static assets');
                 return cache.addAll(STATIC_ASSETS);
             })
             .then(() => {
-                console.log('[SW] Static assets cached');
                 return self.skipWaiting();
             })
             .catch((error) => {
-                console.error('[SW] Installation failed:', error);
+                // Log error silently
             })
     );
 });
 
 // Ativação do Service Worker
 self.addEventListener('activate', (event) => {
-    console.log('[SW] Activating...');
-    
     event.waitUntil(
         caches.keys()
             .then((cacheNames) => {
                 return Promise.all(
                     cacheNames.map((cacheName) => {
                         if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-                            console.log('[SW] Deleting old cache:', cacheName);
                             return caches.delete(cacheName);
                         }
                     })
                 );
             })
             .then(() => {
-                console.log('[SW] Activated');
                 return self.clients.claim();
             })
     );
@@ -111,10 +103,9 @@ async function cacheFirst(request, cacheName) {
         }
         
         return networkResponse;
-    } catch (error) {
-        console.error('[SW] Cache First failed:', error);
-        return new Response('Offline', { status: 503 });
-    }
+        } catch (error) {
+            return new Response('Offline', { status: 503 });
+        }
 }
 
 // Estratégia Network First
@@ -127,7 +118,6 @@ async function networkFirst(request, cacheName) {
         }
         return networkResponse;
     } catch (error) {
-        console.log('[SW] Network failed, trying cache');
         const cachedResponse = await caches.match(request);
         if (cachedResponse) {
             return cachedResponse;
@@ -192,7 +182,6 @@ self.addEventListener('sync', (event) => {
 });
 
 async function doBackgroundSync() {
-    console.log('[SW] Background sync triggered');
     // Implementar sincronização de dados offline
 }
 
@@ -217,4 +206,4 @@ self.addEventListener('push', (event) => {
     }
 });
 
-console.log('[SW] Service Worker loaded');
+// Service Worker loaded

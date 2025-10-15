@@ -63,33 +63,33 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Precision Solutions">
-    <link rel="apple-touch-icon" href="assets/images/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/logo-precision.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Menu principal">
             <div class="logo">
-                <a href="#home">
+                <a href="#home" aria-label="Ir para página inicial">
                     <img src="assets/images/icons/logo-precision.png" alt="Precision Solutions Logo">
                 </a>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" role="menubar">
                 <li><a href="#home" data-i18n="navigation.home">HOME</a></li>
                 <li><a href="#about" data-i18n="navigation.about">QUEM SOMOS</a></li>
-                <li class="dropdown">
-                    <a href="#services" data-i18n="navigation.services">SERVIÇOS</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/consultoria.html" data-i18n="navigation.consulting">Consultoria</a></li>
-                        <li><a href="pages/integracao.html" data-i18n="navigation.integration">Integração</a></li>
-                        <li><a href="pages/operacao.html" data-i18n="navigation.operation">Operação</a></li>
-                        <li><a href="pages/certificacao.html" data-i18n="navigation.certification">Certificação</a></li>
-                        <li><a href="pages/treinamento.html" data-i18n="navigation.training">Treinamento</a></li>
+                <li class="dropdown" role="none">
+                    <a href="#services" data-i18n="navigation.services" role="menuitem" aria-haspopup="true" aria-expanded="false">SERVIÇOS</a>
+                    <ul class="dropdown-menu" role="menu" aria-label="Submenu de serviços">
+                        <li role="none"><a href="pages/consultoria.html" data-i18n="navigation.consulting" role="menuitem">Consultoria</a></li>
+                        <li role="none"><a href="pages/integracao.html" data-i18n="navigation.integration" role="menuitem">Integração</a></li>
+                        <li role="none"><a href="pages/operacao.html" data-i18n="navigation.operation" role="menuitem">Operação</a></li>
+                        <li role="none"><a href="pages/certificacao.html" data-i18n="navigation.certification" role="menuitem">Certificação</a></li>
+                        <li role="none"><a href="pages/treinamento.html" data-i18n="navigation.training" role="menuitem">Treinamento</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#solutions" data-i18n="navigation.solutions">SOLUÇÕES</a>
+                <li role="none">
+                    <a href="#solutions" data-i18n="navigation.solutions" role="menuitem">SOLUÇÕES</a>
                 </li>
                 <li><a href="pages/eventos.html" data-i18n="navigation.events">EVENTOS</a></li>
                 <li><a href="#contact" data-i18n="navigation.contact">CONTATO</a></li>
@@ -102,7 +102,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" role="button" aria-label="Abrir menu" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -113,7 +113,7 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="#home">Home</a>
+            <a href="#home" data-i18n="navigation.home">HOME</a>
         </div>
     </div>
 
@@ -500,10 +500,10 @@
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/public/sw.js')
                     .then((registration) => {
-                        console.log('SW registered: ', registration);
+                        // SW registered successfully
                     })
                     .catch((registrationError) => {
-                        console.log('SW registration failed: ', registrationError);
+                        // SW registration failed
                     });
             });
         }
